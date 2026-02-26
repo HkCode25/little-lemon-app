@@ -1,2 +1,2 @@
-# ReactProject2026
+# little-lemon
 PracticeApp
