@@ -1,2 +1,2 @@
-# little-lemon
+# little-lemon-app
 PracticeApp
