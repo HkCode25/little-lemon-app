@@ -22,19 +22,19 @@ function App() {
 
 <main>
   <article>
-    <div>Homepage for Little Lemon Restaurant</div>
+    <div>Reserve a table at Little Lemon Restaurant</div>
   </article> 
 
   <article>
+    <div>This week's specials!</div>
+  </article>
+
+  <article>
+    <div>Testimonials for Little Lemon Restaurant</div>
+  </article>
+
+  <article>
     <div>About section for Little Lemon Restaurant</div>
-  </article>
-
-  <article>
-    <div>Menu section for Little Lemon Restaurant</div>
-  </article>
-
-  <article>
-    <div>Reservations section for Little Lemon Restaurant</div>
   </article>
 
 </main> 
