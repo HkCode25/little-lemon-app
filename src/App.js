@@ -1,10 +1,11 @@
 import './App.css';
+import logo from './assets/logo.png';
 
 function App() {
   return (
-    <> className="App"
-<header>
-  <img className="logo" src="logo.jpg" alt="Little Lemon Logo" />
+    <> 
+<header className='App-header'>
+  <img className="logo" src = {logo} width = "200px" alt="Little Lemon Logo" />
 
 <nav>
   <ul>
@@ -20,7 +21,7 @@ function App() {
 </header>
 
 
-<main>
+<main className='App-main'>
   <article>
     <div>Reserve a table at Little Lemon Restaurant</div>
   </article> 
@@ -40,7 +41,8 @@ function App() {
 </main> 
 
 
-<footer>
+<footer className='App-footer'>
+  <img className="logo" src = {logo} width = "200px" alt="Little Lemon Logo" />
   <nav> 
     <ul>
       <li><a href="#home">Home</a></li>
@@ -54,7 +56,7 @@ function App() {
   <div>Copyright © 2026 Little Lemon Restaurant</div>
 </footer>
       
-    </>
+  </>
   );
 }
 
