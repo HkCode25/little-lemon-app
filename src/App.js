@@ -1,49 +1,38 @@
 import './App.css';
 import logo from './assets/logo.png';
 import Header from './Components/Header';
+import MainApp from './Components/Main';
+import { Link } from "react-router-dom";
 
 
 function App() {
   return (
     <> 
-      <header className="App-header">
+      
         <Header />
-      </header>
-
-
-<main className='App-main'>
-  <article>
-    <div>Reserve a table at Little Lemon Restaurant</div>
-  </article> 
-
-  <article>
-    <div>This week's specials!</div>
-  </article>
-
-  <article>
-    <div>Testimonials for Little Lemon Restaurant</div>
-  </article>
-
-  <article>
-    <div>About section for Little Lemon Restaurant</div>
-  </article>
-
-</main> 
+        <MainApp />  
 
 
 <footer className='App-footer'>
-  <img className="logo" src = {logo} width = "200px" alt="Little Lemon Logo" />
-  <nav> 
+  
+    <Link to="/">
+      <img className='footerLogo' src = {logo} width = "200px" alt="Little Lemon Logo" />
+    </Link>
+
+
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#reservations">Reservations</a></li>
-      <li><a href="#order-online">Order online</a></li>
-      <li><a href="#login">Login</a></li>
+      <li><Link to="/" className="nav-item">Home</Link></li>
+      <li><Link to="/About" className="nav-item">About</Link></li>
+      <li><Link to="/Menu" className="nav-item">Menu</Link></li>
+      <li><Link to="/Reservations" className="nav-item">Reservations</Link></li>
+      <li><Link to="/OrderOnline" className="nav-item">Order online</Link></li>
+      <li><Link to="/Login" className="nav-item">Login</Link></li>
     </ul>
-  </nav>
-  <div>Copyright © 2026 Little Lemon Restaurant</div>
+
+    <div>
+    <p>Copyright © 2026 Little Lemon Restaurant</p>
+    </div>
+
 </footer>
       
   </>

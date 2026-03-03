@@ -28,6 +28,13 @@ function Header() {
         </ul>
       </nav>
 
+      <section className='heroSection'>
+        <h1>Little Lemon</h1>
+        <h2>Chicago</h2>
+        <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+        <img className='heroImage' src = {require('../assets/hero-image.jpg')} width = "400px" alt="Little Lemon Restaurant" />
+      </section>
+
       {/* <Routes>
         <Route path="/" element={<App />} />
         <Route path="/About" element={<About />} />
