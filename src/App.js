@@ -1,6 +1,7 @@
 import './App.css';
 import logo from './assets/logo.png';
-import Header from './Components/Header';
+import Header from './Components/Header/Header';
+import HeroSection from './Components/Header/HeroSection';
 import MainApp from './Components/Main';
 import { Link } from "react-router-dom";
 
@@ -10,6 +11,7 @@ function App() {
     <> 
       
         <Header />
+        <HeroSection />
         <MainApp />  
 
 

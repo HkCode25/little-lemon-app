@@ -1,5 +1,6 @@
 import React from "react";
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
+//import heroimage from '../../assets/heroimage.jpg';
 import { Link } from "react-router-dom";
 // import { Routes, Route, Link } from "react-router-dom";
 // import About from "../Components/About";
@@ -8,7 +9,7 @@ import { Link } from "react-router-dom";
 // import OrderOnline from "../Components/OrderOnline";
 // import Login from "../Components/Login";
 // import App from "../App";
-
+import './Header.css';
 
 function Header() {
   return (
@@ -28,12 +29,16 @@ function Header() {
         </ul>
       </nav>
 
-      <section className='heroSection'>
+      <div className="hamburger">
+          <img src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png" alt="Hamburger Menu Icon" />
+      </div>
+
+      {/* <section className='heroSection'>
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
         <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-        <img className='heroImage' src = {require('../assets/hero-image.jpg')} width = "400px" alt="Little Lemon Restaurant" />
-      </section>
+        <img className='heroImage' src = {heroimage} width = "400px" alt="Little Lemon Restaurant" />
+      </section> */}
 
       {/* <Routes>
         <Route path="/" element={<App />} />
