@@ -36,8 +36,8 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   /* margin: 0 auto 0 auto; */
-  grid-auto-rows: minmax(auto, 5em);
-  grid-gap: 10px;
+  grid-auto-rows: minmax(auto, 10vh);
+  grid-gap: 1em;
   background-color: #495E57;
   width: 100%;
   color: white;
@@ -74,8 +74,8 @@
 }
 
 .heroDescription {
-  grid-column: 1 / 5;
-  grid-row: 2.2 / 4;
+  grid-column: 1 / 6;
+  grid-row: 3 / 4;
   margin-left: 25vh;
   /* background-color: rgb(165, 167, 167); */
 }
@@ -84,22 +84,30 @@
 .heroButton{
   grid-column: 1 / 13;
   margin-left: 25vh;
-  /* grid-row: 5 / 4; */
 }
 
 .heroButton button {
   background-color: #f4ce14;
   border: none;
   color: rgb(0, 0, 0);
-  padding: 15px 50px;
+  padding: 15px 90px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1em;
+  font-weight: bold;
   margin: 3px 2px;
   cursor: pointer;
   border-radius: 15px 15px 15px 15px;
 }
+
+
+.heroButton button:hover {
+  background-color: #ee9972;
+  color: white;
+  border: 2px solid #f4ce14;
+}
+
 
 
 .heroImage{
@@ -155,5 +163,12 @@
     padding-left: center;
     text-align: center;
     grid-column: 12 / span 3;  
+  }
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+  .heroSection .App-header{
+    grid-template-columns: 1fr; /* Single column layout on small screens */
   }
 }

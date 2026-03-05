@@ -1,1 +1,8 @@
 
+/* For screens smaller than 600px */
+/* Single column layout on small screens */
+/* @media (max-width: 600px) {
+  .AppWrapper {
+    grid-template-columns: 1fr; 
+  }
+} */
