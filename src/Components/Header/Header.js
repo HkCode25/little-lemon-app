@@ -30,7 +30,7 @@ function Header() {
       </nav>
 
       <div className="hamburger">
-          <img src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png" alt="Hamburger Menu Icon" />
+          <Link to ="/About" ><img src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png" alt="Hamburger Menu Icon" /></Link>
       </div>
 
       {/* <section className='heroSection'>
