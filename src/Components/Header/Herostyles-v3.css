@@ -1,0 +1,318 @@
+*{
+  margin:0;
+  font-family: karla, sans-serif;
+}
+
+/* $desktop: 1200px;   // col-xl
+$laptop: 1024px;   // col-lg
+$tablet:768px;		//md
+$phone:480px;		//sm
+*/
+
+
+
+body{
+  background-color:rgb(150, 185, 112);
+/*   padding: min(4px, 10%);
+ */  color: rgb(148, 175, 198);
+ @media screen and (max-width: 1440px) and (min-width:768px) {
+    /* padding: 0; */ 
+    background-color:rgb(255, 255, 255);
+  }
+   @media screen and (max-width: 1024px) and (min-width:768px){
+    width: 1024px;
+    background-color: rgb(203, 191, 189);
+  }
+}
+
+
+.Hero-container {
+  /* width: 1440px; */
+  height: 60vh;
+  margin: 0 auto;
+	display: grid;
+	/* grid-template-columns:  [col] 4fr repeat(4, [gutter] 1fr [col] 4fr ) [gutter];
+	grid-template-rows: auto repeat(4, 100px); */
+  background-color: #1b6654;
+  @media (max-width:480px){
+    height: 80vh;
+    margin: 1vh;
+    padding: 1vh;
+  }
+   @media screen and (max-width: 768px) and (min-width:480px){
+    height: 60vh;
+  }
+   @media screen and (max-width: 1024px) and (min-width:768px){
+    height: 40vh;
+  }
+ }
+
+.Hero-container h1 {
+	grid-column: col / span col 7;
+  grid-row: 1 / 2;
+  text-align: left;
+  color: #d4e74b;
+  font-size: 5em;
+  padding-left: 13vh;
+  padding-top: 10vh;
+  justify-self: start;
+  font-family: Markazi, serif; 
+  @media screen and (max-width:480px){
+    padding-left: 3vh;
+    padding-top: 3vh;
+    font-size:3em;
+    color: ivory;
+  }
+  @media screen and (max-width: 768px) and (min-width:480px){
+    padding: 4vh 4vh 0 4vh;
+    font-size: 4.5em;
+  }
+   @media screen and (max-width: 1024px) and (min-width:768px){
+    padding: 4vh 0 0 4vh;
+    font-size: 5em;
+  }
+  
+}
+
+/* h1{
+   @media (max-width:$laptop){
+    font-size: 3em;
+    color: ivory;
+  }
+} */
+
+.Hero-container h2 {
+	color: #ffffff;
+  text-align: left;
+  font-size: 3em;
+  padding-left: 15vh;
+  padding-top: 3vh;
+  font-family: karla, sans-serif;
+    @media (max-width:480px){
+    padding-left: 3vh;
+    padding-top: 3vh;
+    font-size:2em;
+    color: rgb(186, 186, 125);
+  }
+   @media screen and (max-width: 768px) and (min-width:480px){
+    padding: 2vh 4vh 0 4vh;
+  }
+   @media screen and (max-width: 1024px) and (min-width:768px){
+    padding: 3vh 0 0 5vh;
+    font-size: 3em;
+  }
+}
+
+
+.ag1 {
+	grid-column: col / span gutter 4; 
+	grid-row: 2 / span 1;
+  height: 10vh;
+  transform: translateY(-4vh);
+}
+
+
+.ag2 {
+	grid-column: col 3 / span gutter 6;
+  grid-column: col / span col 6;
+	grid-row: 3 / span 1;
+	/* needs to become a grid in order to position ag4 - ag7 
+	this is where subgrid would be useful as the grid could snap to the lines of the outer.
+	If I use fraction units for the gutters they now become a fraction of the nested grid's width not the outer. Could use absolute units to get round this.
+	*/
+	display: grid;
+	grid-template-columns: [col] 4fr repeat(5, [gutter] 1fr [col] 4fr ) [gutter];
+	grid-template-rows: repeat(5, 100px);
+
+  @media (max-width:480px){
+	grid-row: 7 / span 2;
+    display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, 100px);
+  }
+
+   @media screen and (max-width: 768px) and (min-width:480px){
+    grid-row: 2 / span 5;
+    display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: repeat(1, 6vh);
+  }
+
+   @media screen and (max-width: 1024px) and (min-width:768px){
+    grid-row: 2/2;
+    display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: repeat(1, 4vh);
+  }
+}
+
+
+/* right side bar */
+.ag3 {
+	grid-column: col 9 / span gutter 2; 
+	grid-row: 2 / span 4;
+  /* place-items: center; */
+  /* overflow: hidden; */
+  @media (max-width:480px){
+    grid-column: col 1 / span gutter 1; 
+    grid-row: 3/3;
+    place-items: center;
+  }
+ @media screen and (max-width: 768px) and (min-width:480px){
+    grid-column: col 1 / span gutter 1; 
+    grid-row: 1/3;
+    padding-right: 1vh;
+  }
+
+   @media screen and (max-width: 1024px) and (min-width:768px){
+    grid-column: col 7 / span gutter 1; 
+    grid-row: 3/3;
+    /* justify-content:center; */
+    /* align-content:center; */
+    /* place-content:center; */
+  }
+}
+
+
+.ag4 {
+	grid-column: col / span gutter 5;
+	grid-row: 1 / 2;
+  padding-left: 12vh;
+/*   padding-top: 1vh;
+ */  transform: translateY(1vh);
+  /* max-width: 40ch; */
+  /* margin-top: -2vh; */
+  @media (max-width:480px){
+    padding-left: 3vh;
+   /*  padding-top: 0; */
+    font-size:1em;
+    color: rgb(186, 186, 125);
+    transform: translateY(-4vh);
+    /* padding-top: 20vh; */
+  }
+ @media screen and (max-width: 768px) and (min-width:480px){
+    padding-left: 4vh;
+    transform: translateY(7vh);
+  }
+   @media screen and (max-width: 1024px) and (min-width:768px){
+    padding-left: 5vh;
+    transform: translateY(10vh);
+}
+}
+
+.ag4 p {
+	  max-width: 40ch;
+    font-size: 1.2em;
+  @media screen and (max-width: 768px) and (min-width:480px){
+   max-width: 35ch;
+  /*  font-size: 1.2em; */
+  }
+  @media screen and (max-width: 1024px) and (min-width:768px){
+   /*  font-size: 1.2em; */
+    max-width: 35ch;
+}
+}
+
+.ag6 {
+	grid-column: col / span gutter 5;
+	grid-row: 2 / 2;
+  transform: translateY(4vh);
+  padding-left: 12vh;
+  @media (max-width:480px){
+    padding-left: 3vh;
+   /*  padding-top: 0; */
+    font-size:1em;
+    color: rgb(186, 186, 125);
+    transform: translateY(-5vh);
+    /* padding-top: 20vh; */
+  }
+  @media screen and (max-width: 768px) and (min-width:480px){
+    padding-left: 4vh;
+    transform: translateY(14vh);
+  }
+    @media screen and (max-width: 1024px) and (min-width:768px){
+    padding-left: 5vh;
+    transform: translateY(15vh);
+}
+}
+
+
+.heroImage{
+  transform: translateY(-9vh);
+  padding-right: 15vh;
+     @media (max-width:480px){
+    /* padding-right: 2vh; */
+    margin-top: 4vh;
+    margin-right: 1vh;
+    width: 100%;    
+  }
+  @media screen and (max-width: 768px) and (min-width:480px){
+    width: 65%;  
+    /* transform: translateY(1vh); */
+  }
+}
+
+
+
+.ag3 img{
+  /* display: block; */
+  width: 65vh;
+  max-width: 100%;
+/*   min-width: 300px;
+ */  height: auto;
+  border-radius: 30px 15px 30px 15px;
+  /* object-fit: cover; */
+  /*  @media (max-width:480px){
+    max-width: 400px;
+  } */
+   @media screen and (max-width: 768px) and (min-width:480px){
+    min-width: 350px;
+    transform: translateY(1vh);
+    padding-left: 4vh;
+    border-radius: 20px 10px 25px 10px0;
+  }
+  
+}
+
+
+.Herobtn{
+  background-color: #d0e858;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 15px 60px;
+  border-radius: 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+  text-align: center;
+    @media screen and (max-width: 768px) and (min-width:480px){
+    padding: 15px 50px;
+  }
+      @media screen and (max-width: 1024px) and (min-width:768px){
+    padding: 20px 65px;
+    font-size: 1.5em;
+}
+}
+
+
+.Herobtn:hover{
+  background-color: #c7c2c2;
+  color: #6b3c3c;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .Hero-container {
+    width: 85%;
+  }
+
+
+/*    @media screen and (max-width: 1024px) and (min-width:768px){
+    .Hero-container {
+    width: 85%;
+    background-color: rgb(203, 191, 189);
+  } */
+}

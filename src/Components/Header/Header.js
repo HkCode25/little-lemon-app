@@ -15,7 +15,7 @@ function Header() {
   return (
     <header className='App-header'>
       <Link to="/">
-      <img className='headerLogo' src = {logo} width = "200px" alt="Little Lemon Logo" />
+      <img className='headerLogo' src = {logo} alt="Little Lemon Logo" />
       </Link>
 
       <nav className='headerNav'>
@@ -38,9 +38,9 @@ function Header() {
         <h2>Chicago</h2>
         <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
         <img className='heroImage' src = {heroimage} width = "400px" alt="Little Lemon Restaurant" />
-      </section> */}
+      </section> */
 
-      {/* <Routes>
+      /* <Routes>
         <Route path="/" element={<App />} />
         <Route path="/About" element={<About />} />
         <Route path="/Menu" element={<Menu />} />

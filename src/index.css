@@ -1,9 +1,9 @@
-/* *{
+*{
   box-sizing: border-box;
-  margin: 0;
-  padding: 0; 
-} */
-
+  margin:0;
+  padding: 0;
+  font-family: karla, sans-serif;
+}
 
 
 body {
@@ -17,17 +17,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
-  font-family: "Karla", sans-serif;
+  /* font-family: "Karla", sans-serif; */
   font-optical-sizing: auto;
   font-style: normal;
+
+  /* @media screen and (max-width: 1440px) and (min-width:768px) {
+    background-color:rgb(249, 204, 204);
+  }
+   @media screen and (max-width: 1024px) and (min-width:768px){
+    width: 1024px;
+    background-color: rgb(173, 205, 160);
+  } */
 }
 
 
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 ul{
   list-style-type: none;
@@ -38,7 +42,7 @@ a{
 }
 
 h1 {
-  font-size: 9vh;
+  font-size: 4.5em;
   color: #f4ce14;
   font-family: markazi-text, serif;
   font-weight: bold;
@@ -46,7 +50,7 @@ h1 {
 
 
 h2{
-  font-size: 5vh;
+  font-size: 3.5em;
   color: #ffffff;
   font-family: markazi-text, serif;
   font-weight: medium;
@@ -56,10 +60,10 @@ h2{
 /* Media query for smaller screens */
 @media screen and (max-width: 940px) {
   h1 {
-    font-size: 2.5rem;
+    font-size:2.7rem;
   }  
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 } 
 
