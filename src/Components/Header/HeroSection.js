@@ -13,9 +13,9 @@ function HeroSection() {
                 <div className='heroButton'><button>Reserve a Table</button></div>
             </div>
 
-            {/* <div className="heroRight">
+            <div className="heroRight">
                 <div className='heroImage'><img src = {heroimage} width = "400px" alt="Little Lemon Restaurant" /></div>
-            </div> */}
+            </div>
         </div>
 
         </section>
