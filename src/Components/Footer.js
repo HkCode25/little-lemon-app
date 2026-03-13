@@ -1,8 +1,35 @@
+import logo from '../assets/logo.png';
+import { Link } from "react-router-dom";
+
 function Footer() {
 
     return (
-        <h1>Footer Little Lemon</h1>
-    );
+        <footer className='App-footer'>
+  
+    <Link to="/">
+      <img className='footerLogo' src = {logo} width = "200px" alt="Little Lemon Logo" />
+    </Link>
+
+
+    <ul>
+      <li><Link to="/" className="nav-item">Home</Link></li>
+      <li><Link to="/About" className="nav-item">About</Link></li>
+      <li><Link to="/Menu" className="nav-item">Menu</Link></li>
+      <li><Link to="/Reservations" className="nav-item">Reservations</Link></li>
+      <li><Link to="/OrderOnline" className="nav-item">Order online</Link></li>
+      <li><Link to="/Login" className="nav-item">Login</Link></li>
+    </ul>
+
+    <div>
+    <p>Copyright © 2026 Little Lemon Restaurant</p>
+    </div>
+
+</footer>
+);
 }
 
 export default Footer;
+
+
+
+
