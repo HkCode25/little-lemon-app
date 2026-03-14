@@ -18,8 +18,8 @@ header {
  justify-content: center;
  height: 11.5vh;
  /* padding: 0 6rem; */
- background-color: var(--primaryColor1);
- color: rgb(177, 123, 15);
+ background-color: white;
+ color: rgb(0, 0, 0);
 }
 
 .header_logo {
@@ -40,7 +40,7 @@ nav {
 
 .nav-element {
  font-size: 2vh;
- color: #af0909;
+ color: #000000;
  text-decoration: none;
  margin-top: auto;
  margin-bottom: auto;
@@ -167,3 +167,21 @@ header {
   border-color: var(--secondaryColor1);
  } */
 }
+
+/* @media only screen and (min-width: 992px) {
+ 
+ .navbar {
+ height: 9vh;
+ background-color: #e9e18a;
+ padding: 0 2vh 0 2vh;
+}
+
+header {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 8.5vh;
+ background-color: var(--primaryColor2);
+}
+
+}  */
