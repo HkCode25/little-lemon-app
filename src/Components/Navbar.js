@@ -8,7 +8,7 @@ import About from "../Components/About";
 import Menu from "../Components/Menu";
 import Reservations from "../Components/Reservations";
 import Home from "../Components/Home";
-// import OrderOnline from "../Components/OrderOnline";
+import OrderOnline from "../Components/OrderOnline";
 // import Login from "../Components/Login";
 // import App from "../App";
 /* import hamburgerIcon from '../../assets/icons_assets/hamburgerIcon.png'; */
@@ -39,6 +39,10 @@ function Header() {
             <p>Home</p>
           </Link>
 
+           <Link onClick={showNavbar} to="/about" className="nav-element">
+            <p>About</p>
+          </Link>
+
           <Link onClick={showNavbar} to="/menu" className="nav-element">
             <p>Menu</p>
           </Link>
@@ -47,19 +51,21 @@ function Header() {
             <p>Reservations</p>
           </Link>
 
-          <Link onClick={showNavbar} to="/about" className="nav-element">
-            <p>About</p>
+          <Link onClick={showNavbar} to="/orderonline" className="nav-element">
+            <p>Order online</p>
           </Link>
 
-          <Link onClick={showNavbar} to="/profile" className="nav-element">
-            <p>Profile</p>
-          </Link>
 
-          {/* <Link to="/login" className="nav-element">
+          <Link to="/login" className="nav-element">
             <div className="signin_but">
-              <p>Sign In</p>
+              <p>Login</p>
             </div>
-          </Link> */}
+          </Link> 
+
+          
+          
+
+         
 
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
@@ -75,6 +81,7 @@ function Header() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/menu" element={<Menu />}></Route>
         <Route path="/reservations" element={<Reservations />}></Route>
+        <Route path="/orderonline" element={<OrderOnline />}></Route>
       </Routes>
 
       </header>

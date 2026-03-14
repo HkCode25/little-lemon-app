@@ -15,9 +15,9 @@
 header {
  display: flex;
  align-items: center;
- justify-content: space-between;
- height: 10vh;
- padding: 0 6rem;
+ justify-content: center;
+ height: 11.5vh;
+ /* padding: 0 6rem; */
  background-color: var(--primaryColor1);
  color: rgb(177, 123, 15);
 }
@@ -31,7 +31,7 @@ header {
 }
 
 nav {
- padding: 0 5vh 0 5vh;
+ padding: 0 6vh 0 6vh;
  height: 100%;
  display: flex;
  list-style-type: none;
@@ -44,7 +44,7 @@ nav {
  text-decoration: none;
  margin-top: auto;
  margin-bottom: auto;
- padding: 2vh;
+ padding: 1vh 3vh;
 }
 
 .nav-element:hover {
@@ -80,7 +80,22 @@ nav {
  border-color: var(--secondaryColor2);
 } */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 940px) {
+
+  .navbar {
+ height: 9vh;
+ padding: 0 4vh 0 4vh;
+}
+
+header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 8.5vh;
+ background-color: var(--primaryColor1);
+ color: rgb(177, 123, 15);
+}
+
  header .nav-btn {
   display: inline;
   opacity: 1;
@@ -134,7 +149,7 @@ nav {
  .header_logo {
   width: 12vh;
   object-fit: contain;
-  margin: 0 3vh;
+  margin: 0 2vh;
   margin-top: 8px;
  }
 
