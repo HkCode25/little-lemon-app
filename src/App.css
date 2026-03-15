@@ -44,10 +44,10 @@ h2{
 
  .AppWrapper {
   place-items: center;
-  /* justify-content: center; 
-  max-width: 1800px; 
-  margin-right: 20vh;
-  margin-left: 20vh;  */
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: center;
+  text-align: center;
   }  
  
 

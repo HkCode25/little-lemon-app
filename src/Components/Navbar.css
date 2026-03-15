@@ -2,7 +2,7 @@
  height: 12vh;
  background-color: #beb118;
 /*  position: relative;
- */ position: fixed; /* Fixes the navbar to the viewport */
+ */ /* position: fixed; */ /* Fixes the navbar to the viewport */
   top: 0;          /* Positions it at the very top */
   left: 0;         /* Stretches it from left */
   right: 0;        /* to right */
