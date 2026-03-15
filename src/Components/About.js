@@ -8,7 +8,7 @@ function About() {
   return (
     <div className="about">
       <div className="about__container">
-        <h1>About Little Lemon</h1>
+        <h1>About section for Little Lemon Restaurant</h1>
       </div>
     </div>
   );

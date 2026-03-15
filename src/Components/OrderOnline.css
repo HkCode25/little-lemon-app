@@ -1,0 +1,97 @@
+/* *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'karla', sans-serif;
+}
+
+body{
+  background-color:#f2d8d8;
+  padding: min(20px, 30%);
+  color: aliceblue;
+} */
+
+.container h1{
+  margin: 2vh;
+  color: #6b3c3c;
+}
+
+.card{
+  background-color: #a49797;
+  border-radius: 10px;
+  padding-bottom: 4vh;
+  /* padding-top: 0; */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  /* margin: 2vh; */
+  text-align: center;
+}
+
+.container{
+  display: grid;
+  border: 1px solid #6c6060;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1vh;
+  justify-content: center;
+}
+
+.container img{
+  width: 100%;
+  height: auto;
+  padding-bottom: 3vh;
+  margin: 0;
+  justify-content: center;
+}
+
+.card h3{
+  color: #6b3c3c;
+  margin-bottom: 2vh;
+  font-size: 1.25rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
+  padding: 1vh;
+}
+
+.card p{
+  color: #6b3c3c;
+  margin-bottom: 2vh;
+  padding: 1vh;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
+} 
+
+.card .btn{
+  background-color: #6b3c3c;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+  text-align: center;
+}
+
+.card .btn:hover{
+  background-color: #c7c2c2;
+  color: #6b3c3c;
+}
+
+.cardButton{
+  text-align: left;
+  margin-left: 10px;
+  padding-left: 1vh;
+}
+
+
+.cardIcon{
+  width: 10%;
+  margin-right: 20px;
+  margin-top: -34px;
+  float: right;
+  position: relative;
+}
+
+

@@ -4,18 +4,20 @@ import './Components/Header/heroSection.css';
 /* import logo from './assets/logo.png'; */
 import Navbar from './Components/Navbar';
 import HeroSection from './Components/Header/HeroSection';
-import MainApp from './Components/Main';
+import OrderOnline from './Components/OrderOnline';
 import Footer from './Components/Footer';
 import React from 'react';
-
-
+import Testimonials from './Components/Testimonials';
+import About from './Components/About';
 
 function App() {
   return (
     <div className="AppWrapper">
         <Navbar />
         <HeroSection />
-        <MainApp />
+        <OrderOnline />
+        <Testimonials />
+        <About />
         <Footer />
     </div>
   );
