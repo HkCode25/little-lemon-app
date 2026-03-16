@@ -4,18 +4,13 @@ import './Testimonials.css';
 
 function Testimonials() {
 
-    return (   
-
-        <main className='testimonials'>
-
-        <article>
-            <div>Testimonials for Little Lemon Restaurant</div>
-        </article>
-
-
-        </main> 
-
-    );
+return (
+    <div className="testimonials">
+      <div className="testimonials__container">
+        <h1>Testimonials for Little Lemon Restaurant</h1>
+      </div>
+    </div>
+  );
 }
 
 export default Testimonials;

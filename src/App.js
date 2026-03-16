@@ -16,9 +16,9 @@ function App() {
         <Navbar />
         <HeroSection />
         <OrderOnline />
-        {/* <Testimonials />
-        <About /> 
-        <Footer />*/}
+        <Testimonials />
+        <About />
+        <Footer />
     </div>
   );
 }

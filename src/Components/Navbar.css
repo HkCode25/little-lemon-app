@@ -20,6 +20,7 @@ header {
  /* padding: 0 6rem; */
  background-color: white;
  color: rgb(0, 0, 0);
+ gap: 3rem;
 }
 
 .header_logo {
@@ -31,8 +32,8 @@ header {
 }
 
 nav {
- padding: 0 16vh 0 16vh;
- height: 100%;
+/*  padding: 0 16vh 0 16vh;
+ */ height: 100%;
  display: flex;
  list-style-type: none;
  /* cursor: pointer; */
@@ -44,7 +45,7 @@ nav {
  text-decoration: none;
  margin-top: auto;
  margin-bottom: auto;
- padding: 1vh 3vh;
+ padding: 1vh 2vh;
 
  /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {

@@ -7,8 +7,6 @@ function OrderOnline () {
 
     return (
 
-      
-
     <main className='order-online'>
 
       <div className="specials">
@@ -19,7 +17,6 @@ function OrderOnline () {
       <div className="container">
 
         <div className="card card1">
-
           <img src={heroimage} width = "160px" alt="Placeholder image"/>
           <h3>Greek Salad1 -- $14.99</h3>
           <p>The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
@@ -29,10 +26,9 @@ function OrderOnline () {
           <div className="cardIcon">
             <img src={bikeicon2} alt="bike icon"/>
           </div>
-        </div>
+        </div> 
 
-        <div className="card card2">
-
+      <div className="card card2">
           <img src={heroimage} width = "160px" alt="Placeholder image"/>
           <h3>Greek Salad1 -- $14.99</h3>
           <p>The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
@@ -45,7 +41,6 @@ function OrderOnline () {
         </div>
 
         <div className="card card3">
-
           <img src={heroimage} width = "160px" alt="Placeholder image"/>
           <h3>Greek Salad1 -- $14.99</h3>
           <p>The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
