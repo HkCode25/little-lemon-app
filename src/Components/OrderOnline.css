@@ -1,17 +1,17 @@
 main{
   display:grid;
   grid-template:
-  "title title onlineMenu-btn"   200px
-  "container container container" 70px/1fr 1fr 1fr;
-  grid-column-gap: 1em;
-  align-items: baseline;
+  "title title onlineMenu-btn"   200px 
+  "container container container" 90vh/auto;
+/*   grid-column-gap: 1em;
+ */  align-items: center;
 }
 
 .order-online{
   /* place-items: center; */
   /* text-align: center; */
   width: 85vw;
-  padding: 5rem;
+  padding: 3rem;
   margin: 2rem; 
    /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
@@ -22,57 +22,70 @@ main{
 }
 
 
-/* .specials{
+ .title{
+  grid-area: title;
+}
+
+
+ .specials{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 30rem;
-} */
+  padding: 2rem;
+}
 
 
 .title{
-  grid-area: title;
-  /* display: grid;
-  grid-template-columns: 340px; */
+  width: 50vw;
+/*   float: left;
+ */  text-align: left;
+  padding-left: 6rem;
 }
 
 
-.title h1{
-  font-size: 4em;
+h1{
+  font-size: 4em !important;
    /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
   font-size: 2.7rem;
-  }
-  }
+}
+}
+
+/* .onlineMenu-btn{
+  grid-area: onlineMenu-btn;
+} */
 
 .onlineMenu-btn{
   grid-area: onlineMenu-btn;
-  /* Extra small devices (phones, 600px and down) */
+  width: 40vw;
+/*   float: right;
+ */  /* Extra small devices (phones, 600px and down) */
  /* @media only screen and (max-width: 600px) {
   transform: translateY(16vh);
-  } */
-}
+  }*/
+} 
 
 
-.onlineMenu-btn button{
+.onlineMenu-btn{
   background-color: #f4ce14;
   border: none;
   color: rgb(0, 0, 0);
   padding: 0.7em 3em;
   text-align: center;
   text-decoration: none;
-  width: 12em;
+  width: 14em;
   font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: bold;
   cursor: pointer;
   border-radius: 1.5em;
 }
 
- .onlineMenu-btn button:hover {
+
+.onlineMenu-btn:hover {
   background-color: #ee9972;
   color: white;
-}
+} 
 
 .container{
   grid-area: container;
