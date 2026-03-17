@@ -50,8 +50,10 @@ main{
 }
 
 
-h1{
-  font-size: 3.5em !important;
+.specials h1{
+  font-size: 3.5em;
+  font-weight: normal;
+  color: var(--secondaryColor4);
    /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
   font-size: 1.8rem !important;
@@ -84,8 +86,8 @@ h1{
 
 
 .onlineMenu-btn:hover {
-  background-color: #ee9972;
-  color: white;
+  background-color: var(--secondaryColor1);
+  color: rgb(255, 255, 255);
 } 
 
 
@@ -116,7 +118,7 @@ h1{
 }
 
 .card h3{
-  color: #6b3c3c;
+  color: var(--secondaryColor4);
   margin-bottom: 2vh;
   font-size: 1.25rem;
   margin-left: 10px;
@@ -127,7 +129,7 @@ h1{
 
 
 .card p{
-  color: #6b3c3c;
+  color: var(--secondaryColor4);
   margin-bottom: 2vh;
   padding: 1vh;
   margin-left: 10px;
@@ -136,8 +138,8 @@ h1{
 }
 
 .card .btn{
-  background-color: #6b3c3c;
-  color: white;
+  background-color: var(--primaryColor1);
+  color: rgb(0, 0, 0);
   border: none;
   padding: 10px 30px;
   border-radius: 5px;
@@ -147,8 +149,8 @@ h1{
 }
 
 .card .btn:hover{
-  background-color: #c7c2c2;
-  color: #6b3c3c;
+  background-color: var(--secondaryColor1);
+  color: #ffffff;
 }
 
 .cardButton{

@@ -1,20 +1,100 @@
-.testimonials {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    height: 100vh;   
-    flex-direction: column;
-    width: 100vw; 
-    margin: 0 auto;
-    position: static;
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(10vh);
+     /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  transform: translateY(1vh);
 }
 
-.testimonials__container {
-    margin: auto;
-    padding: 5vh;
-    border-radius: 5px;
-    border: 1px solid lightgray;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  transform: translateY(8%);
 }
-.testimonials__container > h1{
-    font-size:5vw;
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  transform: translateY(12vh);
+}
+}
+
+
+.testimonials{
+  background-color: var(--secondaryColor2);
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  width: 100vw;
+}
+ 
+
+
+.testimonials h1{
+  font-size: 3.5em;
+  /* margin-top: 5rem; */
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 3rem;
+   /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  font-size: 1.8rem !important;
+}
+}
+
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  width: 60%;
+}
+
+
+
+ .card{
+  background-color: var(--secondaryColor3);
+  border-radius: 10px;
+  padding-bottom: 4vh;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+
+.testimonials img{
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 1rem;
+  /* margin: 0; */
+  justify-content: center;
+}
+
+
+.card h3{
+  color: var(--secondaryColor4);
+  margin-bottom: 2vh;
+  font-size: 1.25rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 1vh;
+  text-align: center;
+}
+
+
+.card p{
+  color: var(--secondaryColor4);
+  margin-bottom: 2vh;
+  padding: 1vh;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+span{
+  color: var(--secondaryColor1);
 }

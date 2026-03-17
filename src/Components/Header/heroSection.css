@@ -5,7 +5,7 @@
 /*   grid-template-rows: 30rem auto;
  */  justify-content: center;
   align-items: center; 
-  background-color: #495E57;
+  background-color: var(--primaryColor2);
   width: 100vw;
   color: rgb(255, 255, 255);
   height: 50vh;
@@ -37,7 +37,7 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   height: 60vh;
-  background-color: #199caa;
+  background-color: var(--primaryColor2)
 }
 }
 
