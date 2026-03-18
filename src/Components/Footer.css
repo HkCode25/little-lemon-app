@@ -1,0 +1,51 @@
+.App-footer{
+  background-color: var(--primaryColor2);
+  width: 100vw;
+  height: 30vh;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+/* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  transform: translateY(30vh);
+  display: flex;
+  flex-direction: column;
+}
+}
+
+.footerNav{
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerContact{
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerSocial{
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.footerCopyright{
+  grid-column: 2;
+  color: white;
+  align-items: center;
+  transform: translateX(11rem);
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  transform: translateY(1rem);
+  /* display: flex;
+  flex-direction: column; */
+}
+}
