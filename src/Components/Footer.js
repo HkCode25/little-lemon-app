@@ -23,8 +23,8 @@ function Footer() {
         </Link>
 
 
-      <nav className='footerNav'>       
-          <Link to="/" className="nav-item"><p>Home</p></Link>
+      <nav className='footerNav'>
+          <Link to="/" className="nav-item">Home</Link>
           <Link to="/About" className="nav-item">About</Link>
           <Link to="/Menu" className="nav-item">Menu</Link>
           <Link to="/Reservations" className="nav-item">Reservations</Link>
