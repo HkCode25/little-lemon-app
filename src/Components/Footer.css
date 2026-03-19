@@ -1,27 +1,47 @@
 .App-footer{
   background-color: var(--primaryColor2);
   width: 100vw;
-  height: 30vh;
-  color: white;
+  height: 40vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 1;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0;
 /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-  transform: translateY(30vh);
   display: flex;
   flex-direction: column;
+  padding: 2rem;
+  margin-top: 4rem;
+  height: 100%;
 }
 }
+
+
+.header_logo{
+  background-color: rgb(255, 255, 255);
+  padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+  border-radius: 2.2rem;
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  width: 20vh;
+}
+}
+
+
 
 .footerNav{
   display: flex;
   flex-direction: column;
-  /* justify-self: left; */
+  padding: 2rem;
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
 }
 
 
@@ -33,6 +53,11 @@
   color: white;
   font-size: 1rem;
   cursor: pointer;
+   /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  padding: 0.4rem;
+  margin: 0.4rem;
+}
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
   font-size: 1.1rem;
@@ -55,6 +80,11 @@
   color: white;
   display: flex;
   flex-direction: column;
+}
+
+ .social-icons{
+  color: white;
+  padding: 0.7rem;
 }
 
 

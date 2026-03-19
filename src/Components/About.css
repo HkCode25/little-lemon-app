@@ -1,13 +1,16 @@
 .about {
-    height: 100vh;   
+    width: 70vw;
+    height: 90vh;   
     margin: 0 auto;
-    transform: translateY(15vh);
-    width: 65vw;
+    padding: 7rem 1rem 4rem 1rem;
 /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
- transform: translateY(1vh);
+ padding: 0;
+ margin: 0;
+ height: 100%;
 }
 }
+
 
 .about h1{
     font-size: 3.5em;
