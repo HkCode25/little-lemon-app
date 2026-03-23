@@ -39,7 +39,7 @@ h2{
    @media screen and (max-width: 768px) and (min-width:300px){
     font-size: 2.5rem;
   }
-} 
+}
 
 
  .AppWrapper {
@@ -55,31 +55,7 @@ h2{
   /* grid-auto-flow: row; */
   justify-items: center;
   text-align: center;
-  }  
- 
+  }
 
-
-
-
-
-/* .App-footer {
-  background-color: #495E57;
-  min-height: 20vh;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-
-/* 
-.App-footer ul {
-  gap: 5vh;
-  list-style: none;
-  justify-content: space-evenly;
-  color: white;
-}
-
- */
 
 
