@@ -1,6 +1,7 @@
 import heroimage from '../../assets/heroimage.jpg';
 import './heroSection.css';
-
+/* import Reservations from "./Components/Reservations";
+ */
 function HeroSection() {
     return (
         <section className='heroSection' id="heroS">

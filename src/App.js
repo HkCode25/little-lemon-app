@@ -8,9 +8,9 @@ import Footer from './Components/Footer';
 import React from 'react';
 import Testimonials from './Components/Testimonials';
 import About from './Components/About';
-import Menu from "./Components/Menu";
-import Reservations from "./Components/Reservations";
-import Home from "./Components/Home";
+import Menu from './Components/Menu';
+import Reservations from './Components/Reservations';
+import Home from './Components/Home';
 import {Route, Routes} from 'react-router-dom';
 
 
@@ -18,20 +18,18 @@ function App() {
   return (
     <div className="AppWrapper">
       <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/orderonline" element={<OrderOnline />} />
+      </Routes>
       <HeroSection />
       <OrderOnline />
       <Testimonials />
       <About />
-
-      <Routes>
-        <Route path="/" element={Home} />
-        <Route path="/about" element={About} />
-        <Route path="/menu" element={Menu} />
-        <Route path="/reservations" element={Reservations} />
-        <Route path="/order-online" element={OrderOnline} />
-      </Routes>
-
-        <Footer />
+      <Footer />
     </div>
   );
 }
