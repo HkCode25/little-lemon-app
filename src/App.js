@@ -18,6 +18,7 @@ function App() {
   return (
     <div className="AppWrapper">
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -25,10 +26,7 @@ function App() {
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/orderonline" element={<OrderOnline />} />
       </Routes>
-      <HeroSection />
-      <OrderOnline />
-      <Testimonials />
-      <About />
+  
       <Footer />
     </div>
   );

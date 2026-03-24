@@ -34,8 +34,8 @@
 .about-container1 {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    padding: 4vh;
+    margin: 0 auto;
+    padding: 6vh;
     align-items: start;
     text-align: left;
     border: 1px solid lightgray;
@@ -75,9 +75,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr;
-    border: 1px solid lightgray;
+    border: 1px solid rgb(160, 134, 134);
     align-items: center;
+    justify-content: center;
     width: 70vw;
+    margin: 0 auto;
 /* Extra small devices (phones, 900px and down) */
   @media only screen and (max-width: 900px) {
  display: flex;
@@ -147,7 +149,10 @@
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 2fr;
     border: 1px solid lightgray;
+   /*  align-items: left;
+    justify-content: left; */
     width: 70vw;
+    margin: 0 auto;
      /* Extra small devices (phones, 900px and down) */
   @media only screen and (max-width: 900px) {
  display: flex;
@@ -157,14 +162,14 @@
 
 
  .about-container3 h3 {
- justify-self: start;
+/*  justify-self: start; */
  text-align: left;
  grid-column: 2;
  grid-row: 2;
- margin: 0;
- padding: 0;
+ /* margin: 0;
+ padding: 0; */
 transform: translateY(4vh);
-align-self:first baseline;
+/* align-self:first baseline; */
  /* Extra small devices (phones, 900px and down) */
   @media only screen and (max-width: 900px) {
  flex: 1;
@@ -183,12 +188,12 @@ align-self:first baseline;
 .about-container3 p {
  grid-column: 2;
  grid-row: 2;
- justify-self: start;
+ /* justify-self: start; */
  text-align: left;
  max-width: 40ch;
  min-width: 25ch;
- margin: 0;
- padding-top: 0;
+ /* margin: 0; */
+ padding-top: 1rem;
  align-self:center;
   /* Extra small devices (phones, 900px and down) */
   @media only screen and (max-width: 900px) {
