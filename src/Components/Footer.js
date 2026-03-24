@@ -24,7 +24,7 @@ function Footer() {
 
 
       <nav className='footerNav'>
-          <Link to="/home" className="nav-item"><p>Home</p></Link>
+          <Link to="/" className="nav-item"><p>Home</p></Link>
           <Link to="/about" className="nav-item">About</Link>
           <Link to="/menu" className="nav-item">Menu</Link>
           <Link to="/reservations" className="nav-item">Reservations</Link>
