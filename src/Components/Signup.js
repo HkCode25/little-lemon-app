@@ -75,7 +75,19 @@ return(
            <input 
              id="password"
              type="password" 
-             placeholder='Password' 
+             placeholder='********' 
+             name='password' 
+             value={password} 
+             onChange={(e) => setPassword(e.target.value)}
+           />
+         </div>
+          <div className='signup-password'>
+          <img src={lockIcon} alt="password icon" width="30rem"/>
+           <label htmlFor="password">Confirm Password</label><br />
+           <input 
+             id="password"
+             type="password" 
+             placeholder='********' 
              name='password' 
              value={password} 
              onChange={(e) => setPassword(e.target.value)}
@@ -94,11 +106,10 @@ return(
          
 
     </form>
-          <button
-          onClick={() => props.onFormSwitch('login2')}
-          disabled={!email}
+          <button className='switchform-btn'
+          onClick={() => props.onFormSwitch('login')}
           type='button'>
-          Login
+          Already have an account? Login!
           </button>
 
   </div>

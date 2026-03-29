@@ -52,14 +52,14 @@ const [password, setPassword] = useState("");
       <div className='forgot-password'>Forgot password? <span>Click here!</span></div>
       <div className="submit-container">
           <button
-          /* disabled={!email}  */
+          disabled={!email}
           type='submit'>
           Login
           </button>
       </div>
     </form>
 
-        <button 
+        <button className='switchform-btn' 
           onClick={() => props.onFormSwitch('signup')}
           /* disabled={!email} */ 
           type='button'>

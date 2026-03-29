@@ -1,18 +1,18 @@
 .loginForm{
   display: flex;
   flex-direction: column;
-  margin: 6rem;
+  margin: 5rem;
   /* margin-top: 7vh; */
   background-color: var(--secondaryColor2);
-  padding: 4rem;
+  padding: 3rem;
 }
 
 
-.loginForm fieldset{
-  width: 45vw;
+/* .loginForm fieldset{
+  width: 50vw;
   padding: 3rem;
   border: solid 0.2rem white;
- }
+ } */
 
 
  .signup{
@@ -25,7 +25,7 @@
 .firstName{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 2rem;
   margin-top: 1rem;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@
 .lastName{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 2rem;
   margin-top: 1rem;
   align-items: center;
   justify-content:center;
@@ -45,7 +45,7 @@
 .email{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 2rem;
   margin-top: 1rem;
   align-items: center;
   justify-content: center;
@@ -55,7 +55,7 @@
 .signup-password{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 2rem;
   margin-top: 1rem;
   align-items: center;
   justify-content: center;
@@ -86,6 +86,8 @@ padding: 1.3rem;
 .forgot-password span{
 color: var(--primaryColor2);
 cursor: pointer;
+font-size: 1rem;
+font-weight: bold;
 }
 
 
@@ -98,6 +100,7 @@ cursor: pointer;
 .submit-container{
   display: flex;
   flex-direction: row;
+  padding: 1rem;
 }
 
 
@@ -113,7 +116,7 @@ cursor: pointer;
   font-weight: bold;
   cursor: pointer;
   border-radius: 1.5em;
-  margin: 1rem;
+  margin: 0 auto;
 }
 
 
@@ -122,13 +125,35 @@ cursor: pointer;
   color: white;
 }
 
-
-.gray{
-  background-color: rgb(188, 188, 188);
-  color: rgb(118, 117, 119);
-  /* pointer-events: none; */
+form{
+  padding: 2rem;
 }
 
+/* .gray{
+  background-color: rgb(188, 188, 188);
+  color: rgb(118, 117, 119);
+}
+ */
 /* .noHover{
     pointer-events: none;
 } */
+
+
+.switchform-btn{
+  background-color: transparent;
+  border: none;
+  color: var(--primaryColor2);
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 20em;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+
+.switchform-btn:hover{
+  color: var(--secondaryColor1);
+}
