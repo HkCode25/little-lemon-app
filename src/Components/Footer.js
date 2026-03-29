@@ -2,11 +2,11 @@ import logo from '../assets/logo.png';
 import { Routes, Route, Link } from "react-router-dom";
 import "./Footer.css";
 import { useRef } from "react";
-import About from "../Components/About";
+/* import About from "../Components/About";
 import Menu from "../Components/Menu";
 import Reservations from "../Components/Reservations";
 import Home from "../Components/Home";
-import OrderOnline from "../Components/OrderOnline";
+import OrderOnline from "../Components/OrderOnline"; */
 import { FaYoutube, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 function Footer() {
