@@ -1,11 +1,11 @@
 import React from "react";
-import "./bookingpage.css";
+import "./BookingForm.css";
+import BookingForm from "./BookingForm";
 
 
 function BookingPage() {
   return (
     <div className="bookingpage">
-        <h1>Reserve a Table on this page.</h1>
         <BookingForm />
     </div>
   );

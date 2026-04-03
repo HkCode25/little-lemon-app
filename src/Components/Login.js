@@ -17,7 +17,7 @@ const toggleForm = (formName) => {
 
 return(
 
-  <div className='loginForm'>
+  <div className='registration'>
     {currentForm === "login" ? <Login2 onFormSwitch={toggleForm}/> : <Signup onFormSwitch={toggleForm}/>}
   </div>
 

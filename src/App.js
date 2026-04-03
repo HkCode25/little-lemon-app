@@ -12,9 +12,11 @@ import Reservations from './Components/Reservations';
 import Home from './Components/Home';
 import {Route, Routes} from 'react-router-dom';
 import Login from './Components/Login';
-import { Signup } from './Components/Signup';
+import BookingPage from './Components/BookingPage';
+/* import BookingForm from './Components/BookingForm'; */
+/* import { Signup } from './Components/Signup';
 import { Login2 } from './Components/Login2';
-import React, { useState } from 'react';
+import React, { useState } from 'react'; */
 
 
 function App() {
@@ -35,7 +37,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/bookingpage" element={<BookingPage />} />
         <Route path="/orderonline" element={<OrderOnline />} />
         <Route path="/login" element={<Login />} />
         {/* <Route path="/signup" element={<Signup />} /> */}

@@ -1,10 +1,20 @@
-.loginForm{
+.registration{
   display: flex;
   flex-direction: column;
-  margin: 5rem;
-  /* margin-top: 7vh; */
-  background-color: var(--secondaryColor2);
+/*   margin: 4rem;
+ */  /* margin-top: 7vh; */
+  background-color: var(--secondaryColor3);
   padding: 3rem;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.loginForm{
+  padding: 4rem;
+  margin: 2rem;
+  border: white solid 0.7rem;
 }
 
 
@@ -18,8 +28,8 @@
  .signup{
   font-size: 2rem;
   font-family: karla, sans-serif;
-  padding: 0.6rem;
- }
+/*   padding: 0.6rem;
+ */ }
 
 
 .firstName{
@@ -40,6 +50,7 @@
   align-items: center;
   justify-content:center;
 }
+
 
 
 .email{
