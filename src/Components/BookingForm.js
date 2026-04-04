@@ -2,17 +2,23 @@ import "./BookingForm.css";
 import React, { useState } from 'react';
 
 
-function BookingForm() {
+
+function BookingForm({ availableTimes, dispatch }) {
+  function handleDateChange(event) {
+    const selectedDate = event.target.value;
+    dispatch({ type: "update", date: selectedDate });
+  }
+
    const [date, setDate] = useState("");
    const today = new Date().toISOString().split('T')[0];
-   const [availableTimes] = useState([
+   /* const [availableTimes] = useState([
     "17:00",
     "18:00",
     "19:00",
     "20:00",
     "21:00",
     "22:00", 
-   ]);
+   ]); */
    const [selectedTime, setSelectedTime] = useState("17:00"); // default selected time
    const [guests, setGuests] = useState("1");
    const [occasion, setOccasion] = useState("");
@@ -90,7 +96,7 @@ const handleChange = (e) => {
   };
 
 
-  return (
+return (
 
 <form onSubmit={handleSubmit} className="bookingForm">
    <>
@@ -101,14 +107,19 @@ const handleChange = (e) => {
 
    <div className="date">
    <label htmlFor="res-date">Choose date</label>
-   <input type="date" name ="date" id="res-date" min={today} value={date} onChange={handleChange} required/>
+   <input type="date" name ="date" id="res-date" min={today} value={date} onChange={handleDateChange} required/>
+   {/* <ul>
+        {availableTimes.map((time) => (
+          <li key={time}>{time}</li>
+        ))}
+   </ul> */}
    {errors.date && <p className="error">{errors.date}</p>}
    </div>
 
    <div className="time">
    <label htmlFor="res-time">Choose time</label>
    <select id="res-time" name="availableTimes" value={selectedTime} onChange={handleChange} required>
-   {availableTimes.map((time) => (
+   {availableTimes && availableTimes.map(time =>  (
       <option key={time} value={time}>{time}</option>
    ))}
    </select>

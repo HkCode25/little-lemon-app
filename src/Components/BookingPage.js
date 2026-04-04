@@ -3,10 +3,10 @@ import "./BookingForm.css";
 import BookingForm from "./BookingForm";
 
 
-function BookingPage() {
+function BookingPage({ availableTimes, dispatch }) {
   return (
     <div className="bookingpage">
-        <BookingForm />
+      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
     </div>
   );
 }

@@ -13,38 +13,60 @@ import Home from './Components/Home';
 import {Route, Routes} from 'react-router-dom';
 import Login from './Components/Login';
 import BookingPage from './Components/BookingPage';
-/* import BookingForm from './Components/BookingForm'; */
-/* import { Signup } from './Components/Signup';
-import { Login2 } from './Components/Login2';
-import React, { useState } from 'react'; */
+/* import BookingForm from './Components/BookingForm';
+ *//* import { Signup } from './Components/Signup';
+import { Login2 } from './Components/Login2';*/
+import React, { useState } from 'react';
+import { useReducer } from 'react'; 
 
+
+function initializeTimes() {
+  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+}
+
+function timesReducer(state, action) {
+  switch (action.type) {
+    case "update":
+      return initializeTimes();
+    default:
+      return state;
+  }
+}
 
 function App() {
-  /* const [currentForm, setCurrentForm] = useState('login'); */
+    const [availableTimes, dispatch] = React.useReducer(timesReducer, [], initializeTimes);
 
- /*  const toggleForm = (formName) => {
-  setCurrentForm(formName);
-  } */
+/* const [availableTimes, setAvailableTimes] = React.useState([
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00", 
+   ]); */
+
+
 
   return (
-    
     <div className="AppWrapper">
-      
+
       <Navbar />
      {/*  {currentForm === "login" ? <Login2 onFormSwitch={toggleForm}/> : <Signup onFormSwitch={toggleForm}/>} */}
-      
+    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/bookingpage" element={<BookingPage />} />
+        <Route path="/bookingpage" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />} />
         <Route path="/orderonline" element={<OrderOnline />} />
         <Route path="/login" element={<Login />} />
         {/* <Route path="/signup" element={<Signup />} /> */}
       </Routes>
-  
+      
       <Footer />
+
     </div>
+  
   );
 }
 
