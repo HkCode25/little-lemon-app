@@ -1,15 +1,10 @@
 import "./BookingForm.css";
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 
 
 
 function BookingForm({ availableTimes, dispatch }) {
-  function handleDateChange(event) {
-    const selectedDate = event.target.value;
-    dispatch({ type: "update", date: selectedDate });
-  }
-
-   const [date, setDate] = useState("");
+   const [date, setDate] = React.useState("");
    const today = new Date().toISOString().split('T')[0];
    /* const [availableTimes] = useState([
     "17:00",
@@ -23,6 +18,13 @@ function BookingForm({ availableTimes, dispatch }) {
    const [guests, setGuests] = useState("1");
    const [occasion, setOccasion] = useState("");
    const [errors, setErrors] = useState({});
+
+
+    function handleDateChange(e) {
+    const selectedDate = e.target.value;
+    setDate(selectedDate); // update local state so input reflects the change
+    dispatch({ type: "update", date: selectedDate });
+  }
 
 
 const validate = () => {
@@ -108,11 +110,6 @@ return (
    <div className="date">
    <label htmlFor="res-date">Choose date</label>
    <input type="date" name ="date" id="res-date" min={today} value={date} onChange={handleDateChange} required/>
-   {/* <ul>
-        {availableTimes.map((time) => (
-          <li key={time}>{time}</li>
-        ))}
-   </ul> */}
    {errors.date && <p className="error">{errors.date}</p>}
    </div>
 

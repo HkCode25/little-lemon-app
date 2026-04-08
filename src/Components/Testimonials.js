@@ -14,7 +14,7 @@ return (
       <div className="container">
 
         <div className="card card1">
-          <img src={annaPersona} alt="Placeholder image"/>
+          <img src={annaPersona} alt="Anna"/>
           <h3>Ritu Sinh</h3>
           <h4>Teacher</h4>
           <p className="starRating">
@@ -28,7 +28,7 @@ return (
         </div>
 
         <div className="card card2">
-          <img src={annaPersona} alt="Placeholder image"/>
+          <img src={annaPersona} alt="Anna"/>
           <h3>Ritu Sinh</h3>
           <h4>Teacher</h4>
           <p className="starRating">
@@ -42,7 +42,7 @@ return (
         </div>
 
         <div className="card card3">
-          <img src={annaPersona} alt="Placeholder image"/>
+          <img src={annaPersona} alt="Anna"/>
           <h3>Ritu Sinh</h3>
           <h4>Teacher</h4>
           <p className="starRating">
@@ -56,7 +56,7 @@ return (
         </div>
 
         <div className="card card1">
-          <img src={annaPersona} alt="Placeholder image"/>
+          <img src={annaPersona} alt="Anna"/>
           <h3>Ritu Sinh</h3>
           <h4>Teacher</h4>
           <p className="starRating">

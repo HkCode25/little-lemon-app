@@ -1,7 +1,7 @@
 import logo from '../assets/logo.png';
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Footer.css";
-import { useRef } from "react";
+/* import { useRef } from "react"; */
 /* import About from "../Components/About";
 import Menu from "../Components/Menu";
 import Reservations from "../Components/Reservations";

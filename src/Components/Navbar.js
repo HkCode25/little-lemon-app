@@ -1,9 +1,12 @@
 import React from "react";
 import logo from '../assets/logo.png';
-import { Link } from "react-router-dom";
 import './Navbar.css';
-import { FaBars, FaTimes } from "react-icons/fa";
-import { useRef } from "react";
+import { Link } from "react-router-dom";
+
+
+
+/* import { FaBars, FaTimes } from "react-icons/fa";
+ *//* import { useRef } from "react"; */
 /* import About from "../Components/About";
 import Menu from "../Components/Menu";
 import Reservations from "../Components/Reservations";
