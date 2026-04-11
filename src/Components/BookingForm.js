@@ -1,23 +1,16 @@
 import "./BookingForm.css";
-import React, { useState, useReducer } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 
 
 
 function BookingForm({ availableTimes, dispatch }) {
    const [date, setDate] = React.useState("");
    const today = new Date().toISOString().split('T')[0];
-   /* const [availableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00", 
-   ]); */
    const [selectedTime, setSelectedTime] = useState("17:00"); // default selected time
    const [guests, setGuests] = useState("1");
    const [occasion, setOccasion] = useState("");
    const [errors, setErrors] = useState({});
+
 
 
     function handleDateChange(e) {
@@ -96,6 +89,10 @@ const handleChange = (e) => {
 /*     alert(`Table reserved on ${date}, at ${availableTimes}, for ${guests}`); */
 /*     alert("Table reserved on:\n" + date + "at" + selectedTime + "\nNumber of guests: " + guests); */
   };
+
+
+
+  
 
 
 return (
