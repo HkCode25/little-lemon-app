@@ -12,18 +12,13 @@ import Reservations from './Components/Reservations';
 import Home from './Components/Home';
 import Login from './Components/Login';
 import BookingPage from './Components/BookingPage';
-/* import BookingForm from './Components/BookingForm';
- *//* import { Signup } from './Components/Signup';
+import BookingForm from './Components/BookingForm';
+/* import { Signup } from './Components/Signup';
 import { Login2 } from './Components/Login2';*/
 import React, { useState } from 'react';
 import { useReducer } from 'react'; 
 import { Routes, Route } from "react-router-dom";
-
-
-//code for  static times array, which is now replaced by the initializeTimes function that generates the available times based on the date selected by the user.
-/* export function initializeTimes() {
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-} */
+import { fetchAPI } from "./api";
 
 
 
@@ -46,22 +41,39 @@ import { Routes, Route } from "react-router-dom";
 export function timesReducer(state, action) {
   switch (action.type) {
     case "update":
-      return initializeTimes(action.date) || state; // In a real app, you'd fetch available times based on the date selected
+      return action.times || state; // In a real app, you'd fetch available times based on the date selected
     default:
       return state;
   }
 }
 
-function App() {
-    const [availableTimes, dispatch] = React.useReducer(timesReducer, [], initializeTimes);
 
+
+
+
+
+
+function App() {
+  const [date, setDate] = React.useState(new Date().toISOString().split('T')[0]);
+  const [availableTimes, dispatch] = React.useReducer(timesReducer, []);
+
+  
+ React.useEffect(() => {
+    async function fetchTimes() {
+      const dateObj = new Date(date);
+      const times = await fetchAPI(dateObj);
+      dispatch({ type: "update", times });
+    }
+    fetchTimes();
+  }, [date]);
 
 
   return (
+
     <div className="AppWrapper">
 
       <Navbar />
-         
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -70,11 +82,11 @@ function App() {
         <Route path="/orderonline" element={<OrderOnline />} />
         <Route path="/login" element={<Login />} />
       </Routes>
-      
+
       <Footer />
 
     </div>
-  
+
   );
 }
 

@@ -32,4 +32,24 @@ test('timesReducer returns correct times for the given date', () => {
   
   const newState = timesReducer(currentState, action);
   expect(newState).toEqual(expectedState);
+}); 
+
+
+
+test('timesReducer returns the same state for unknown action type', () => {
+  const currentState = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  const action = { type: 'unknown' };
+  const newState = timesReducer(currentState, action);
+  expect(newState).toEqual(currentState);
 });
+
+
+test('timesReducer returns the same state when no times are provided', () => {
+  const currentState = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  const action = { type: 'update', date: '2026-04-11' }; // No times provided in action
+  const newState = timesReducer(currentState, action);
+  expect(newState).toEqual(currentState);
+}); 
+
+
+

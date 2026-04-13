@@ -1,6 +1,7 @@
 import "./BookingForm.css";
-import React, { useState, useEffect, useReducer } from 'react';
-
+import React, { useState } from 'react';
+import { submitAPI } from "../api";
+import { useNavigate } from 'react-router-dom';
 
 
 function BookingForm({ availableTimes, dispatch }) {
@@ -10,6 +11,7 @@ function BookingForm({ availableTimes, dispatch }) {
    const [guests, setGuests] = useState("1");
    const [occasion, setOccasion] = useState("");
    const [errors, setErrors] = useState({});
+   
 
 
 
@@ -32,23 +34,17 @@ const validate = () => {
 };
 
 
-/*    const handleChange = (e) => {
-    setDate(e.target.value);
-    setAvailableTimes(e.target.value);
-    setGuests(e.target.value);
-    setOccasion(e.target.value);
-  }; */
 
 const handleChange = (e) => {
   const { name, value } = e.target;
   if (name === "date") setDate(value);
-  else if (name === "availableTimes") setSelectedTime(value);
+  else if (name === "SelectedTime") setSelectedTime(value);
   else if (name === "guests") setGuests(value);
   else if (name === "occasion") setOccasion(value);
 };
 
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault(); // Prevents the default form submission behavior
    if (!validate()) return; // Stop submission if invalid
 
@@ -60,39 +56,20 @@ const handleChange = (e) => {
    };
 
 
-   try {
-      const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert("Booking successful! Table reserved on:\n" + date + "at" + selectedTime + "\nNumber of guests: " + guests);
-        // Optionally reset form fields here
-        setDate("");
-        setSelectedTime("17:00");
-        setGuests("1");
-        setOccasion("");
-      } else {
-        alert("Failed to book table. Please try again.");
-      }
-    } catch (error) {
-      alert("An error occurred: " + error.message);
-    }
-   /*  console.log(formData); */
-/*     const formData = new FormData(e.target);
- */
-    // You can access the 'name' state here to send to an API or for validation
-/*     alert(`Table reserved on ${date}, at ${availableTimes}, for ${guests}`); */
-/*     alert("Table reserved on:\n" + date + "at" + selectedTime + "\nNumber of guests: " + guests); */
-  };
+ const success = submitAPI(formData);
+  if (success) {
+    alert(`Booking successful! Table reserved on: ${date} at ${selectedTime}\nNumber of guests: ${guests}`);
+    // Optionally reset form fields here
+    setDate("");
+    setSelectedTime("17:00");
+    setGuests("1");
+    setOccasion("");
+  } else {
+    alert("Failed to book table. Please try again.");
+  }
+};
 
 
-
-  
 
 
 return (
@@ -112,7 +89,7 @@ return (
 
    <div className="time">
    <label htmlFor="res-time">Choose time</label>
-   <select id="res-time" name="availableTimes" value={selectedTime} onChange={handleChange} required>
+   <select id="res-time" name="SelectedTime" value={selectedTime} onChange={handleChange} required>
    {availableTimes && availableTimes.map(time =>  (
       <option key={time} value={time}>{time}</option>
    ))}
