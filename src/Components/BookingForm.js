@@ -7,12 +7,11 @@ import { useNavigate } from 'react-router-dom';
 function BookingForm({ availableTimes, dispatch }) {
    const [date, setDate] = React.useState("");
    const today = new Date().toISOString().split('T')[0];
-   const [selectedTime, setSelectedTime] = useState("17:00"); // default selected time
-   const [guests, setGuests] = useState("1");
+   const [selectedTime, setSelectedTime] = useState(""); // default selected time
+   const [guests, setGuests] = useState("");
    const [occasion, setOccasion] = useState("");
    const [errors, setErrors] = useState({});
    
-
 
 
     function handleDateChange(e) {
@@ -54,7 +53,6 @@ const handleChange = (e) => {
     guests,
     occasion,
    };
-
 
  const success = submitAPI(formData);
   if (success) {
@@ -99,7 +97,7 @@ return (
 
    <div className="guests">
    <label htmlFor="guests">Number of guests</label>
-   <input type="number" name ="guests" placeholder="1" min="1" max="10" id="guests" value={guests} onChange={handleChange} required/>
+   <input type="number" name ="guests" placeholder="1"  min="1" max="10" id="guests" value={guests} onChange={handleChange} required/>
    {errors.guests && <p className="error">{errors.guests}</p>}
    </div>
 
@@ -117,7 +115,7 @@ return (
    {errors.occasion && <p className="error">{errors.occasion}</p>}
    </div>
 
-   <button type="submit" onSubmit={handleSubmit}>Reserve Table</button>
+   <button type="submit" disabled={!date /* || !selectedTime || !guests || !occasion */} onSubmit={handleSubmit}>Reserve Table</button>
 
    </fieldset> 
 

@@ -77,3 +77,8 @@ input, select, option{
   background-color: var(--secondaryColor1);
   color: white;
 }
+
+.bookingForm button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

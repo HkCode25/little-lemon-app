@@ -7,6 +7,19 @@ import lockIcon from '../assets/icons_assets/New Folder With Items/lockIcon.png'
 export const Login2 = (props) =>{
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
+const [errors, setErrors] = useState({});
+
+
+
+const validate = () => {
+  const newErrors = {};
+  if (!email) newErrors.email = "Please enter a valid email.";
+  if (!password) newErrors.password = "Please enter a password.";
+  setErrors(newErrors);
+  return Object.keys(newErrors).length === 0;
+};
+
+
 
 
 
@@ -14,6 +27,7 @@ const [password, setPassword] = useState("");
      e.preventDefault();
      setEmail("");
      setPassword("");
+     if (!validate()) return; // Stop submission if invalid
      console.log("Form submitted");
      alert(`Thank you!`);
    }
@@ -37,6 +51,7 @@ const [password, setPassword] = useState("");
              value={email}
              onChange={(e) => setEmail(e.target.value)}
            />
+           {errors.email && <p className="error">{errors.email}</p>}
       </div>
       <div className='signup-password'>
           <img src={lockIcon} alt="password icon" width="30rem"/>
@@ -49,12 +64,13 @@ const [password, setPassword] = useState("");
              value={password}
              onChange={(e) => setPassword(e.target.value)}
             />
+            {errors.password && <p className="error">{errors.password}</p>}
       </div>
       <div className='forgot-password'>Forgot password? <span>Click here!</span></div>
       <div className="submit-container">
           <button
-          disabled={!email}
-          type='submit'>
+/*           disabled={!password || !email}
+ */          type='submit'>
           Login
           </button>
       </div>
@@ -62,8 +78,8 @@ const [password, setPassword] = useState("");
 
         <button className='switchform-btn' 
           onClick={() => props.onFormSwitch('signup')}
-          /* disabled={!email} */ 
-          type='button'>
+/*           disabled={!password || !email}
+ */          type='button'>
           Don't have an account? Sign Up!
         </button>
     
