@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function BookingForm({ availableTimes, dispatch }) {
    const [date, setDate] = React.useState("");
    const today = new Date().toISOString().split('T')[0];
-   const [selectedTime, setSelectedTime] = useState(""); // default selected time
+   const [selectedTime, setSelectedTime] = useState("17:00"); // default selected time
    const [guests, setGuests] = useState("");
    const [occasion, setOccasion] = useState("");
    const [errors, setErrors] = useState({});
@@ -81,7 +81,7 @@ return (
 
    <div className="date">
    <label htmlFor="res-date">Choose date</label>
-   <input type="date" name ="date" id="res-date" min={today} value={date} onChange={handleDateChange} required/>
+   <input type="date" aria-label="date-input" name ="date" id="res-date" min={today} value={date} onChange={handleDateChange} required/>
    {errors.date && <p className="error">{errors.date}</p>}
    </div>
 
