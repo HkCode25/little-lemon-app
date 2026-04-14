@@ -1,8 +1,8 @@
 import "./BookingForm.css";
 import React, { useState } from 'react';
 import { submitAPI } from "../api";
-import { useNavigate } from 'react-router-dom';
-
+/* import { useNavigate } from 'react-router-dom';
+ */
 
 function BookingForm({ availableTimes, dispatch }) {
    const [date, setDate] = React.useState("");
@@ -11,27 +11,18 @@ function BookingForm({ availableTimes, dispatch }) {
    const [guests, setGuests] = useState("");
    const [occasion, setOccasion] = useState("");
    const [errors, setErrors] = useState({});
-   
-
-
-    function handleDateChange(e) {
-    const selectedDate = e.target.value;
-    setDate(selectedDate); // update local state so input reflects the change
-    dispatch({ type: "update", date: selectedDate });
-  }
 
 
 const validate = () => {
   const newErrors = {};
-  if (!date) newErrors.date = "Please select a date.";
-  if (!selectedTime) newErrors.time = "Please select a time.";
+  if (!date) newErrors.date = "Please select a date";
+  if (!selectedTime) newErrors.time = "Please select a time";
   if (!guests || guests < 1 || guests > 10)
-    newErrors.guests = "Guests must be between 1 and 10.";
-  if (!occasion) newErrors.occasion = "Please select an occasion.";
+    newErrors.guests = "Guests must be between 1 and 10";
+  if (!occasion) newErrors.occasion = "Please select an occasion";
   setErrors(newErrors);
   return Object.keys(newErrors).length === 0;
 };
-
 
 
 const handleChange = (e) => {
@@ -60,14 +51,18 @@ const handleChange = (e) => {
     // Optionally reset form fields here
     setDate("");
     setSelectedTime("17:00");
-    setGuests("1");
+    setGuests("");
     setOccasion("");
   } else {
     alert("Failed to book table. Please try again.");
   }
 };
 
-
+  function handleDateChange(e) {
+    const selectedDate = e.target.value;
+    setDate(selectedDate); // update local state so input reflects the change
+/*     dispatch({ type: "update", date: selectedDate });
+ */  }
 
 
 return (
@@ -115,7 +110,7 @@ return (
    {errors.occasion && <p className="error">{errors.occasion}</p>}
    </div>
 
-   <button type="submit" disabled={!date /* || !selectedTime || !guests || !occasion */} onSubmit={handleSubmit}>Reserve Table</button>
+   <button type="submit" disabled={!date} onSubmit={handleSubmit}>Reserve Table</button>
 
    </fieldset> 
 

@@ -13,8 +13,6 @@ import Home from './Components/Home';
 import Login from './Components/Login';
 import BookingPage from './Components/BookingPage';
 import BookingForm from './Components/BookingForm';
-/* import { Signup } from './Components/Signup';
-import { Login2 } from './Components/Login2';*/
 import React, { useState } from 'react';
 import { useReducer } from 'react'; 
 import { Routes, Route } from "react-router-dom";

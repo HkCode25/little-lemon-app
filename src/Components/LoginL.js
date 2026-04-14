@@ -4,7 +4,7 @@ import emailIcon from '../assets/icons_assets/New Folder With Items/emailIcon.pn
 import lockIcon from '../assets/icons_assets/New Folder With Items/lockIcon.png';
 /* import Login from './Login'; */
 
-export const Login2 = (props) =>{
+export const LoginL = (props) =>{
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [errors, setErrors] = useState({});
@@ -13,14 +13,11 @@ const [errors, setErrors] = useState({});
 
 const validate = () => {
   const newErrors = {};
-  if (!email) newErrors.email = "Please enter a valid email.";
-  if (!password) newErrors.password = "Please enter a password.";
+  if (!email) newErrors.email = "Please enter a valid email";
+  if (!password) newErrors.password = "Please enter a password";
   setErrors(newErrors);
   return Object.keys(newErrors).length === 0;
 };
-
-
-
 
 
    const handleSubmit = (e) => {
@@ -30,7 +27,8 @@ const validate = () => {
      if (!validate()) return; // Stop submission if invalid
      console.log("Form submitted");
      alert(`Thank you!`);
-   }
+   
+  }
 
 
   return (
@@ -69,8 +67,9 @@ const validate = () => {
       <div className='forgot-password'>Forgot password? <span>Click here!</span></div>
       <div className="submit-container">
           <button
-/*           disabled={!password || !email}
- */          type='submit'>
+/*          disabled={!password || !email}
+ */         type='submit'
+            onSubmit={handleSubmit}>
           Login
           </button>
       </div>

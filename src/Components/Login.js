@@ -5,7 +5,7 @@ import lockIcon from '../assets/icons_assets/New Folder With Items/lockIcon.png'
 /* import nameIcon from '../assets/icons_assets/New Folder With Items/nameIcon.png';  */
 /* import Signup from './Signup'; */
 import { Signup } from './Signup';
-import { Login2 } from './Login2';
+import { LoginL } from './LoginL';
 
 
 function Login() {
@@ -18,7 +18,7 @@ const toggleForm = (formName) => {
 return(
 
   <div className='registration'>
-    {currentForm === "login" ? <Login2 onFormSwitch={toggleForm}/> : <Signup onFormSwitch={toggleForm}/>}
+    {currentForm === "login" ? <LoginL onFormSwitch={toggleForm}/> : <Signup onFormSwitch={toggleForm}/>}
   </div>
 
 );

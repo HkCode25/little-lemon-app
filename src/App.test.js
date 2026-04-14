@@ -1,7 +1,7 @@
 import { render, screen, fireEvent, userEvent } from '@testing-library/react';
 import BookingForm from './Components/BookingForm';
 import { timesReducer } from './App';
- 
+import LoginL from './Components/LoginL';
 
 
 
@@ -92,6 +92,7 @@ render(<BookingForm dispatch={mockDispatch}/>);
 
 
 
+
 test('select input changes value', () => {
   render(<BookingForm />);
 
@@ -104,16 +105,64 @@ test('select input changes value', () => {
 
 
 
-{/* <div className="occasion">
-   <label htmlFor="occasion">Occasion</label>
-   <select id="occasion" name ="occasion" value={occasion} onChange={handleChange}>
-      <option value="" disabled>
-            Select an occasion
-      </option>
-      <option>Birthday</option>
-      <option>Anniversary</option>
-      <option>Celebration</option>
-      <option>No occasion</option>
-   </select>
-   {errors.occasion && <p className="error">{errors.occasion}</p>}
-   </div> */}
+
+test('guests input accepts value', () => {
+  render(<BookingForm />);
+
+  const guestsInput = screen.getByLabelText('Number of guests');
+
+  fireEvent.change(guestsInput, { target: { value: '4' } });
+
+  expect(guestsInput.value).toBe('4');
+});
+
+
+
+/* test('renders error messages when form is submitted with empty fields', async () => {
+  render(<BookingForm />);
+
+  const submitButton = screen.getByText('Reserve Table');
+  fireEvent.click(submitButton);
+  screen.debug();
+  
+  expect(await screen.findByText('Please select a date.')).toBeInTheDocument();
+  expect(await screen.findByText('Please select a time.')).toBeInTheDocument();
+  expect(await screen.findByText('Guests must be between 1 and 10.')).toBeInTheDocument();
+  expect(await screen.findByText('Please select an occasion.')).toBeInTheDocument();
+}); */
+
+
+
+/* test('renders error messages when form is submitted with empty fields', () => {
+  render(<LoginL />);
+
+  const submitButton = screen.getByText('Login');
+  fireEvent.click(submitButton);
+  screen.debug();
+
+  expect(screen.findByText('Please enter a valid email')).toBeInTheDocument();
+  expect(screen.findByText('Please enter a password')).toBeInTheDocument();
+}); */
+
+
+
+test('renders error messages when form is submitted with empty fields', async () => {
+  render(<BookingForm />);
+
+  // Get the submit button
+  const submitButton = screen.getByRole('button', { name: /reserve table/i });
+
+  // If button is disabled, enable it for the test
+  if (submitButton.disabled) {
+    submitButton.removeAttribute('disabled');
+  }
+
+  // Click submit without filling fields
+  fireEvent.click(submitButton);
+
+  // Assert error messages appear
+  expect(await screen.findByText(/Please select a date/i)).toBeInTheDocument();
+  expect(await screen.findByText(/Please select a time/i)).toBeInTheDocument();
+  expect(await screen.findByText(/Guests must be between 1 and 10/i)).toBeInTheDocument();
+  expect(await screen.findByText(/Please select an occasion/i)).toBeInTheDocument();
+});
