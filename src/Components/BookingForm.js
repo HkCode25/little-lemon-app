@@ -7,28 +7,30 @@ import { submitAPI } from "../api";
 function BookingForm({ availableTimes, dispatch }) {
    const [date, setDate] = React.useState("");
    const today = new Date().toISOString().split('T')[0];
-   const [selectedTime, setSelectedTime] = useState("17:00"); // default selected time
+   const [selectedTime, setSelectedTime] = useState(""); // default selected time
    const [guests, setGuests] = useState("");
    const [occasion, setOccasion] = useState("");
    const [errors, setErrors] = useState({});
 
-
 const validate = () => {
   const newErrors = {};
-  if (!date) newErrors.date = "Please select a date";
-  if (!selectedTime) newErrors.time = "Please select a time";
+  if (!date) newErrors.date = "Please select a date.";
+  /* if (!selectedTime) newErrors.time = "Please select a time."; */
+  if (!selectedTime || selectedTime === "") newErrors.time = "Please select a time";
   if (!guests || guests < 1 || guests > 10)
-    newErrors.guests = "Guests must be between 1 and 10";
-  if (!occasion) newErrors.occasion = "Please select an occasion";
+    newErrors.guests = "Guests must be between 1 and 10.";
+  if (!occasion) newErrors.occasion = "Please select an occasion.";
   setErrors(newErrors);
   return Object.keys(newErrors).length === 0;
 };
 
 
+
+
 const handleChange = (e) => {
   const { name, value } = e.target;
   if (name === "date") setDate(value);
-  else if (name === "SelectedTime") setSelectedTime(value);
+  else if (name === "selectedTime") setSelectedTime(value);
   else if (name === "guests") setGuests(value);
   else if (name === "occasion") setOccasion(value);
 };
@@ -50,7 +52,7 @@ const handleChange = (e) => {
     alert(`Booking successful! Table reserved on: ${date} at ${selectedTime}\nNumber of guests: ${guests}`);
     // Optionally reset form fields here
     setDate("");
-    setSelectedTime("17:00");
+    setSelectedTime(""); // reset to default time
     setGuests("");
     setOccasion("");
   } else {
@@ -61,8 +63,8 @@ const handleChange = (e) => {
   function handleDateChange(e) {
     const selectedDate = e.target.value;
     setDate(selectedDate); // update local state so input reflects the change
-/*     dispatch({ type: "update", date: selectedDate });
- */  }
+    dispatch({ type: 'update_times', date: selectedDate }); // update available times in parent component
+  }
 
 
 return (
@@ -82,7 +84,8 @@ return (
 
    <div className="time">
    <label htmlFor="res-time">Choose time</label>
-   <select id="res-time" name="SelectedTime" value={selectedTime} onChange={handleChange} required>
+   <select id="res-time" name="selectedTime" value={selectedTime} onChange={handleChange}>
+   <option value="" disabled>Select a time</option>
    {availableTimes && availableTimes.map(time =>  (
       <option key={time} value={time}>{time}</option>
    ))}
@@ -92,7 +95,7 @@ return (
 
    <div className="guests">
    <label htmlFor="guests">Number of guests</label>
-   <input type="number" name ="guests" placeholder="1"  min="1" max="10" id="guests" value={guests} onChange={handleChange} required/>
+   <input type="number" name ="guests" placeholder="Select number of guests"  /* min="1" max="10" */ id="guests" value={guests} onChange={handleChange}/>
    {errors.guests && <p className="error">{errors.guests}</p>}
    </div>
 
@@ -110,7 +113,7 @@ return (
    {errors.occasion && <p className="error">{errors.occasion}</p>}
    </div>
 
-   <button type="submit" disabled={!date} onSubmit={handleSubmit}>Reserve Table</button>
+   <button type="submit" disabled={!date}>Reserve Table</button>
 
    </fieldset> 
 

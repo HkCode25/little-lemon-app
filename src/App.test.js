@@ -159,8 +159,8 @@ test('renders error messages when form is submitted with empty fields', async ()
   const submitButton = screen.getByRole('button', { name: /Login/i });
   fireEvent.click(submitButton);
 
-  expect(await screen.findByText('Please enter a valid email')).toBeInTheDocument();
-  expect(await screen.findByText('Please enter a password')).toBeInTheDocument();
+  expect(await screen.findByText('Please enter a valid email.')).toBeInTheDocument();
+  expect(await screen.findByText('Please enter a password.')).toBeInTheDocument();
 });
 
 
@@ -190,3 +190,44 @@ test('renders error messages when form is submitted with empty fields', async ()
 
 
 
+
+
+//This test is similar to the previous one but it also simulates changing the time select to an empty value before submitting, to ensure that the time validation error is triggered as well.
+/* test('renders error messages when form is submitted with empty fields', async () => {
+  render(<BookingForm />);
+
+  const submitButton = screen.getByRole('button', { name: /Reserve Table/i });
+
+  if (submitButton.disabled) {
+    submitButton.removeAttribute('disabled');
+  }
+
+  fireEvent.click(submitButton);
+
+  expect(await screen.findByText(/Please select a date/i)).toBeInTheDocument();
+  expect(await screen.findByText(/Please select a time/i)).toBeInTheDocument();
+  expect(await screen.findByText(/Guests must be between 1 and 10/i)).toBeInTheDocument();
+  expect(await screen.findByText(/Please select an occasion/i)).toBeInTheDocument();
+}); */
+
+
+//This test is similar to the previous one but it also simulates changing the time select to an empty value before submitting, to ensure that the time validation error is triggered as well.
+test('renders error messages when form is submitted with empty fields', async () => {
+  render(<BookingForm />);
+
+  const submitButton = screen.getByRole('button', { name: /Reserve Table/i });
+
+  if (submitButton.disabled) {
+    submitButton.removeAttribute('disabled');
+  }
+
+  const timeSelect = screen.getByLabelText(/choose time/i);
+  fireEvent.change(timeSelect, { target: { value: '' } });
+
+  fireEvent.click(submitButton);
+
+  expect(await screen.findByText(/Please select a date/i)).toBeInTheDocument();
+  expect(await screen.findByText(/Please select a time/i)).toBeInTheDocument();
+  expect(await screen.findByText(/Guests must be between 1 and 10/i)).toBeInTheDocument();
+  expect(await screen.findByText(/Please select an occasion/i)).toBeInTheDocument();
+});

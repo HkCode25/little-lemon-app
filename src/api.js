@@ -16,11 +16,11 @@ const fetchAPI = function(date) {
     let result = [];
     let random = seededRandom(date.getDate());
 
-    for(let i = 17; i <= 23; i++) {
+    for(let i = 17; i <= 22; i++) {
         if(random() < 0.5) {
             result.push(i + ':00');
         }
-        if(random() < 0.5) {
+        if(random() > 0.25) {
             result.push(i + ':30');
         }
     }

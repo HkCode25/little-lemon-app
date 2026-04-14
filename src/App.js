@@ -8,14 +8,14 @@ import Footer from './Components/Footer';
 /* import Testimonials from './Components/Testimonials'; */
 import About from './Components/About';
 import Menu from './Components/Menu';
-import Reservations from './Components/Reservations';
-import Home from './Components/Home';
+/* import Reservations from './Components/Reservations';
+ */import Home from './Components/Home';
 import Login from './Components/Login';
 import BookingPage from './Components/BookingPage';
-import BookingForm from './Components/BookingForm';
-import React, { useState } from 'react';
-import { useReducer } from 'react'; 
-import { Routes, Route } from "react-router-dom";
+/* import BookingForm from './Components/BookingForm';
+ */import React from 'react';
+/* import { useReducer } from 'react'; 
+ */import { Routes, Route } from "react-router-dom";
 import { fetchAPI } from "./api";
 
 

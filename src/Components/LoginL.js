@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./Login.css";
 import emailIcon from '../assets/icons_assets/New Folder With Items/emailIcon.png';
 import lockIcon from '../assets/icons_assets/New Folder With Items/lockIcon.png';
-/* import Login from './Login'; */
+
 
 export const LoginL = (props) =>{
 const [email, setEmail] = useState("");
@@ -13,8 +13,8 @@ const [errors, setErrors] = useState({});
 
 const validate = () => {
   const newErrors = {};
-  if (!email) newErrors.email = "Please enter a valid email";
-  if (!password) newErrors.password = "Please enter a password";
+  if (!email) newErrors.email = "Please enter a valid email.";
+  if (!password) newErrors.password = "Please enter a password.";
   setErrors(newErrors);
   return Object.keys(newErrors).length === 0;
 };
@@ -43,7 +43,7 @@ const validate = () => {
            <label htmlFor="email">Email</label><br />
            <input 
              id="email"
-             type="email" 
+             type="email"
              placeholder='Email' 
              name='email' 
              value={email}
@@ -69,8 +69,8 @@ const validate = () => {
           <button
 /*          disabled={!password || !email}
  */         type='submit'
-            onSubmit={handleSubmit}>
-          Login
+/*             onSubmit={handleSubmit}
+ */          >Login
           </button>
       </div>
     </form>
