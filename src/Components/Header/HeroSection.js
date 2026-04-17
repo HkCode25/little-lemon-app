@@ -15,7 +15,7 @@ function HeroSection() {
             </div>
 
             <div className="heroRight">
-                <div className='heroImage'><img src = {heroimage} width = "300px" alt="Little Lemon Restaurant" /></div>
+                <div className='heroImage'><img src = {heroimage} width = "300px" alt="" /></div>
             </div>
         </div>
 

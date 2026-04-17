@@ -14,57 +14,45 @@ return (
       <div className="container">
 
         <div className="card card1">
-          <img src={annaPersona} alt="Anna"/>
-          <h3>Ritu Sinh</h3>
+          <img src={annaPersona} alt="Picture of Anna"/>
+          <h3>Anna</h3>
           <h4>Teacher</h4>
           <p className="starRating">
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9734;</span>
+          <span className="sr-only">4 out of 5 stars</span>
+          <span aria-hidden="true">★★★★☆</span>
           </p>
           <p>Great food, service and the staff! Long time neighborhood restaurant.</p>
         </div>
 
         <div className="card card2">
-          <img src={annaPersona} alt="Anna"/>
-          <h3>Ritu Sinh</h3>
+          <img src={annaPersona} alt="Picture of Anna"/>
+          <h3>Anna</h3>
           <h4>Teacher</h4>
           <p className="starRating">
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9733;</span>
+          <span className="sr-only">4 out of 5 stars</span>
+          <span aria-hidden="true">★★★★☆</span>
           </p>
           <p>Great food, service and the staff! Long time neighborhood restaurant.</p>
         </div>
 
         <div className="card card3">
-          <img src={annaPersona} alt="Anna"/>
-          <h3>Ritu Sinh</h3>
+          <img src={annaPersona} alt="Picture of Anna"/>
+          <h3>Anna</h3>
           <h4>Teacher</h4>
           <p className="starRating">
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9733;</span>
+          <span className="sr-only">5 out of 5 stars</span>
+          <span aria-hidden="true">★★★★★</span>
           </p>
           <p>Great food, service and the staff! Long time neighborhood restaurant.</p>
         </div>
 
         <div className="card card1">
-          <img src={annaPersona} alt="Anna"/>
-          <h3>Ritu Sinh</h3>
+          <img src={annaPersona} alt="Picture of Anna"/>
+          <h3>Anna</h3>
           <h4>Teacher</h4>
           <p className="starRating">
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9733;</span>
-            <span>&#9734;</span>
+          <span className="sr-only">5 out of 5 stars</span>
+          <span aria-hidden="true">★★★★★</span>
           </p>
           <p>Great food, service and the staff! Long time neighborhood restaurant.</p>
         </div>

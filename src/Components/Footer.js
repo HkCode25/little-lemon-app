@@ -18,7 +18,7 @@ function Footer() {
           <img
             className="header_logo"
             src={logo}
-            alt="header_logo"
+            alt="Little Lemon logo"
           />
         </Link>
 

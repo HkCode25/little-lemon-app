@@ -28,7 +28,7 @@ function Navbar() {
           <img
             className="header_logo"
             src={logo}
-            alt="header logo"
+            alt="Little Lemon logo"
           />
         </Link>
 

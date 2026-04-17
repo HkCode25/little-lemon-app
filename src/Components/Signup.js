@@ -34,7 +34,7 @@ return(
 
     <form onSubmit={handleSubmit}>
         <div className='firstName'>
-          <img src={nameIcon} alt="name icon" width="30rem"/>
+          <img src={nameIcon} alt="" width="30rem"/>
            <label htmlFor="firstName">First Name</label><br />
            <input 
              id="firstName"
@@ -46,7 +46,7 @@ return(
            />
          </div>
           <div className='lastName'>
-           <img src={nameIcon} alt="name icon" width="30rem"/>
+           <img src={nameIcon} alt="" width="30rem"/>
            <label htmlFor="lastName">Last Name</label><br />
            <input 
              id="lastName"
@@ -58,7 +58,7 @@ return(
            />
          </div>
          <div className='email'>
-          <img src={emailIcon} alt="email icon" width="30rem"/>
+          <img src={emailIcon} alt="" width="30rem"/>
            <label htmlFor="email">Email</label><br />
            <input 
              id="email"
@@ -70,7 +70,7 @@ return(
            />
          </div>
          <div className='signup-password'>
-          <img src={lockIcon} alt="password icon" width="30rem"/>
+          <img src={lockIcon} alt="" width="30rem"/>
            <label htmlFor="password">Password</label><br />
            <input 
              id="password"
@@ -82,7 +82,7 @@ return(
            />
          </div>
           <div className='signup-password'>
-          <img src={lockIcon} alt="password icon" width="30rem"/>
+          <img src={lockIcon} alt="" width="30rem"/>
            <label htmlFor="password">Confirm Password</label><br />
            <input 
              id="password"

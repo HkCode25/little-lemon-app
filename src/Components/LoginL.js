@@ -39,7 +39,7 @@ const validate = () => {
 
     <form onSubmit={handleSubmit}>
       <div className='email'>
-          <img src={emailIcon} alt="email icon" width="30rem"/>
+          <img src={emailIcon} alt="" width="30rem"/>
            <label htmlFor="email">Email</label><br />
            <input 
              id="email"
@@ -52,7 +52,7 @@ const validate = () => {
            {errors.email && <p className="error">{errors.email}</p>}
       </div>
       <div className='signup-password'>
-          <img src={lockIcon} alt="password icon" width="30rem"/>
+          <img src={lockIcon} alt="" width="30rem"/>
            <label htmlFor="password">Password</label><br />
            <input 
              id="password"
