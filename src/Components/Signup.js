@@ -43,6 +43,8 @@ return(
              name='firstname' 
              value={firstname} 
              onChange={(e) => setFirstname(e.target.value)}
+             minLength="2"
+             required
            />
          </div>
           <div className='lastName'>
@@ -55,6 +57,8 @@ return(
              name='lastname' 
              value={lastname} 
              onChange={(e) => setLastName(e.target.value)}
+             minLength="2"
+             required
            />
          </div>
          <div className='email'>
@@ -67,6 +71,7 @@ return(
              name='email' 
              value={email} 
              onChange={(e) => setEmail(e.target.value)}
+             required
            />
          </div>
          <div className='signup-password'>
@@ -79,6 +84,8 @@ return(
              name='password' 
              value={password} 
              onChange={(e) => setPassword(e.target.value)}
+             minLength="8"
+             required
            />
          </div>
           <div className='signup-password'>
@@ -91,6 +98,8 @@ return(
              name='password' 
              value={password} 
              onChange={(e) => setPassword(e.target.value)}
+             minLength="8"
+             required
            />
          </div>
                   

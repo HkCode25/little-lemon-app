@@ -5,15 +5,19 @@ import { submitAPI } from "../api";
  */
 
 function BookingForm({ availableTimes, dispatch }) {
-   const [date, setDate] = React.useState("");
-   const today = new Date().toISOString().split('T')[0];
-   const [selectedTime, setSelectedTime] = useState(""); // default selected time
-   const [guests, setGuests] = useState("");
-   const [occasion, setOccasion] = useState("");
-   const [errors, setErrors] = useState({});
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [date, setDate] = React.useState("");
+  const today = new Date().toISOString().split('T')[0];
+  const [selectedTime, setSelectedTime] = useState(""); // default selected time
+  const [guests, setGuests] = useState("");
+  const [occasion, setOccasion] = useState("");
+  const [errors, setErrors] = useState({});
 
 const validate = () => {
   const newErrors = {};
+  if (!firstname || firstname.trim().length < 2) newErrors.firstname = "First name must be at least 2 characters.";
+  if (!lastname || lastname.trim().length < 2) newErrors.lastname = "Last name must be at least 2 characters.";
   if (!date) newErrors.date = "Please select a date.";
   /* if (!selectedTime) newErrors.time = "Please select a time."; */
   if (!selectedTime || selectedTime === "") newErrors.time = "Please select a time";
@@ -29,6 +33,8 @@ const validate = () => {
 
 const handleChange = (e) => {
   const { name, value } = e.target;
+  if (name === "firstname") setFirstname(value);
+  if (name === "lastname") setLastName(value);
   if (name === "date") setDate(value);
   else if (name === "selectedTime") setSelectedTime(value);
   else if (name === "guests") setGuests(value);
@@ -41,6 +47,8 @@ const handleChange = (e) => {
    if (!validate()) return; // Stop submission if invalid
 
    const formData = {
+    firstname,
+    lastname,
     date,
     time: selectedTime,
     guests,
@@ -49,8 +57,10 @@ const handleChange = (e) => {
 
  const success = submitAPI(formData);
   if (success) {
-    alert(`Booking successful! Table reserved on: ${date} at ${selectedTime}\nNumber of guests: ${guests}`);
+    alert(`Booking successful! Table reserved for: ${firstname} ${lastname} on: ${date} at ${selectedTime}\nNumber of guests: ${guests}`);
     // Optionally reset form fields here
+    setFirstname("");
+    setLastName("");
     setDate("");
     setSelectedTime(""); // reset to default time
     setGuests("");
@@ -75,6 +85,35 @@ return (
    </>
 
    <fieldset> 
+
+        <div className='firstName'>
+           <label htmlFor="firstName">First Name</label><br />
+           <input 
+             id="firstName"
+             type="text" 
+             placeholder='First Name' 
+             name='firstname' 
+             value={firstname} 
+             onChange={(e) => setFirstname(e.target.value)}
+             minLength="2"
+             required 
+             />
+            {errors.firstname && <p className="error">{errors.firstname}</p>}
+        </div>
+        <div className='lastName'>
+           <label htmlFor="lastName">Last Name</label><br />
+           <input 
+             id="lastName"
+             type="text" 
+             placeholder='Last Name' 
+             name='lastname' 
+             value={lastname} 
+             onChange={(e) => setLastName(e.target.value)}
+             minLength="2"
+             required
+            />
+            {errors.lastname && <p className="error">{errors.lastname}</p>}
+        </div>
 
    <div className="date">
    <label htmlFor="res-date">Choose date</label>

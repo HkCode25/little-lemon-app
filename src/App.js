@@ -20,6 +20,12 @@ import { fetchAPI } from "./api";
 
 
 
+function updateTimes(date) {
+  const dateObj = new Date(date);
+  const times = fetchAPI(dateObj);
+  return times;
+} 
+
   //this is the function that initializes the available times for the booking form. It returns an array of time slots based on the date selected by the user. If the date falls on a weekend (Saturday or Sunday), it returns a different set of time slots compared to weekdays.
   export function initializeTimes(dateString) {
   const date = new Date(dateString);
@@ -48,9 +54,6 @@ export function timesReducer(state, action) {
 
 
 
-
-
-
 function App() {
   const [date, setDate] = React.useState(new Date().toISOString().split('T')[0]);
   const [availableTimes, dispatch] = React.useReducer(timesReducer, []);
@@ -59,7 +62,7 @@ function App() {
  React.useEffect(() => {
     async function fetchTimes() {
       const dateObj = new Date(date);
-      const times = await fetchAPI(dateObj);
+      const times = fetchAPI(dateObj);
       dispatch({ type: "update", times });
     }
     fetchTimes();

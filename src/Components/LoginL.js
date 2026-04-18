@@ -7,7 +7,7 @@ import lockIcon from '../assets/icons_assets/New Folder With Items/lockIcon.png'
 export const LoginL = (props) =>{
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
-const [errors, setErrors] = useState({});
+const [errors, setErrors] = useState([]);
 
 
 
@@ -61,6 +61,7 @@ const validate = () => {
              name='password'
              value={password}
              onChange={(e) => setPassword(e.target.value)}
+             minLength="8"
             />
             {errors.password && <p className="error">{errors.password}</p>}
       </div>

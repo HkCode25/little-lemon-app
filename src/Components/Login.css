@@ -168,3 +168,14 @@ form{
 .switchform-btn:hover{
   color: var(--secondaryColor1);
 }
+
+input:focus:invalid{
+  border: 0.2rem solid red;
+  outline: none; /* optional */
+} 
+
+
+input:focus:invalid{
+  border: 0.2rem solid red;
+  outline: none; /* optional */
+} 

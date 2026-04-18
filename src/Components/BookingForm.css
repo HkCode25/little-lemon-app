@@ -82,3 +82,13 @@ input, select, option{
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+input:focus:invalid{
+  border: 0.2rem solid red;
+  outline: none; /* optional */
+} 
+
+select:focus:invalid{
+  border: 0.2rem solid red;
+  outline: none; /* optional */
+} 
