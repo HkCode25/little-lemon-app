@@ -81,7 +81,6 @@ test('time input accepts value', () => {
 });
 
 
-  
 
 test('date input accepts value', () => {
 const mockDispatch = jest.fn();
@@ -103,9 +102,9 @@ test('select input changes value', () => {
 
   const select = screen.getByLabelText('Occasion');
 
-  fireEvent.change(select, { target: { value: "" } });
+  fireEvent.change(select, { target: { value: "Birthday" } });
 
-  expect(select.value).toBe("");
+  expect(select.value).toBe("Birthday");
 });
 
 

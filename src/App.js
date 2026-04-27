@@ -41,7 +41,6 @@ function updateTimes(date) {
 }
 
 
-
 export function timesReducer(state, action) {
   switch (action.type) {
     case "update":

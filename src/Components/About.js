@@ -19,13 +19,13 @@ function About() {
       <div className="about-container2">
         <h3>Mario</h3>
         <p>The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
-        <img src={heroimage} width = "160px" alt="Picture of Mario"/>
+        <img src={heroimage} width = "160px" alt="Mario"/>
       </div>
 
       <div className="about-container3">
         <h3>Adrian</h3>
         <p>The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
-        <img src={heroimage} width = "160px" alt="Picture of Adrian"/>
+        <img src={heroimage} width = "160px" alt="Adrian"/>
       </div>
 
     </div>

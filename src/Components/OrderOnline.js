@@ -3,8 +3,8 @@ import './OrderOnline.css';
 import heroimage from '../assets/heroimage.jpg';
 import  bikeicon2 from '../assets/icons_assets/bikeicon2.png';
 import pickupIcon from '../assets/icons_assets/pickupIcon.png';
-import logo from '../assets/logo.png';
-import { Link } from "react-router-dom";
+/* import logo from '../assets/logo.png';
+ *//* import { Link } from "react-router-dom"; */
 
 
 
