@@ -141,7 +141,7 @@ header {
   margin: 0.2vh;
  }
 
- .nav-element:hover {
+.nav-element:hover {
   color: var(--secondaryColor1);
  }
 
