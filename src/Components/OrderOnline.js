@@ -5,10 +5,11 @@ import  bikeicon2 from '../assets/icons_assets/bikeicon2.png';
 import pickupIcon from '../assets/icons_assets/pickupIcon.png';
 /* import logo from '../assets/logo.png';
  *//* import { Link } from "react-router-dom"; */
-
+import { useNavigate } from 'react-router-dom';
 
 
 function OrderOnline () {
+    const navigate = useNavigate();
 
     return (
 
@@ -16,7 +17,7 @@ function OrderOnline () {
 
       <div className="specials">
         <h1 className="title">This week's specials!</h1>
-        <button type="button" className='onlineMenu-btn'>Online Menu</button>
+        <button type="button" className='onlineMenu-btn' onClick={() => navigate ('./menu')}>Online Menu</button>
       </div>
 
       <div className="container">
